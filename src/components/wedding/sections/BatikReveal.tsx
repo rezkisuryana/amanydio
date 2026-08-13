@@ -41,7 +41,7 @@ export function BatikReveal({
         <BatikPattern
           variant={variant}
           opacity={tone === "dark" ? 0.3 : 0.18}
-          className={tone === "dark" ? "mix-blend-screen" : undefined}
+          className={tone === "dark" ? "mix-blend-screen" : ""}
         />
       </motion.div>
 
