@@ -12,7 +12,14 @@ import {
 } from "../JavaneseOrnaments";
 import { ParallaxElement, SectionTitle } from "../primitives";
 
-type Person = (typeof weddingConfig.couple)["bride"];
+type Person = {
+  readonly name: string;
+  readonly nickname: string;
+  readonly order: string;
+  readonly parents: readonly string[];
+  readonly instagram: string;
+  readonly photo: string;
+};
 
 export function CoupleSection() {
   const { couple } = weddingConfig;
