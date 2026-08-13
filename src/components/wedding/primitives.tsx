@@ -117,7 +117,7 @@ export function ParallaxElement({
 
   return (
     <div ref={ref} className={className} style={style}>
-      <motion.div style={reduce ? undefined : { y, willChange: "transform" }}>
+      <motion.div style={reduce ? {} : { y, willChange: "transform" }}>
         {children}
       </motion.div>
     </div>
