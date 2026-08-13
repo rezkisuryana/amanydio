@@ -9,10 +9,11 @@ export const DURATION = {
 
 export const EASE_SILK: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
-export const silk = (
-  duration = DURATION.normal,
-  delay = 0,
-): Transition => ({ duration, delay, ease: EASE_SILK });
+export const silk = (duration: number = DURATION.normal, delay = 0): Transition => ({
+  duration,
+  delay,
+  ease: EASE_SILK,
+});
 
 export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 28 },
