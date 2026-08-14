@@ -122,7 +122,7 @@ function PersonCard({
         viewport={viewportOnce}
         transition={silk(1.1, 0.5)}
       >
-        <FloralOrnament className="rotate-90" />
+        <SulurVine className="rotate-90" />
       </motion.div>
 
       <p className="mt-2 font-sans text-[0.55rem] tracking-royal uppercase text-gold">{label}</p>
