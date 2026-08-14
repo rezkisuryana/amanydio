@@ -13,9 +13,9 @@ export function Melati({
   size = 26,
   strokeWidth = 0.8,
 }: {
-  className?: string;
-  size?: number;
-  strokeWidth?: number;
+  className?: string | undefined;
+  size?: number | undefined;
+  strokeWidth?: number | undefined;
 }) {
   const petals = Array.from({ length: 5 }, (_, i) => patra(24, 24, 15, 5.4, -90 + i * 72, 0.5));
   const inner = Array.from({ length: 5 }, (_, i) => patra(24, 24, 8, 3, -54 + i * 72, 0.6));
@@ -50,9 +50,9 @@ export function KantilSprig({
   strokeWidth = 0.85,
   flip,
 }: {
-  className?: string;
-  strokeWidth?: number;
-  flip?: boolean;
+  className?: string | undefined;
+  strokeWidth?: number | undefined;
+  flip?: boolean | undefined;
 }) {
   const stem: Pt[] = [
     [16, 300],
@@ -125,10 +125,10 @@ export function FloralCorner({
   flipY,
   strokeWidth = 0.85,
 }: {
-  className?: string;
-  flipX?: boolean;
-  flipY?: boolean;
-  strokeWidth?: number;
+  className?: string | undefined;
+  flipX?: boolean | undefined;
+  flipY?: boolean | undefined;
+  strokeWidth?: number | undefined;
 }) {
   const spine: Pt[] = [
     [4, 4],
@@ -191,9 +191,9 @@ export function SulurVine({
   flip,
   strokeWidth = 0.85,
 }: {
-  className?: string;
-  flip?: boolean;
-  strokeWidth?: number;
+  className?: string | undefined;
+  flip?: boolean | undefined;
+  strokeWidth?: number | undefined;
 }) {
   const rnd = seeded(21);
   const spine: Pt[] = Array.from({ length: 14 }, (_, i) => {
@@ -236,8 +236,8 @@ export function MelatiField({
   className,
   tone = "gold",
 }: {
-  count?: number;
-  className?: string;
+  count?: number | undefined;
+  className?: string | undefined;
   tone?: "gold" | "cream" | "sogan";
 }) {
   const rnd = seeded(97);

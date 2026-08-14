@@ -11,8 +11,8 @@ export function JogloLineArt({
   className,
   strokeWidth = 1,
 }: {
-  className?: string;
-  strokeWidth?: number;
+  className?: string | undefined;
+  strokeWidth?: number | undefined;
 }) {
   const CX = 480;
 

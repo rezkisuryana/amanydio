@@ -23,7 +23,7 @@ export function JavaneseDivider({
 }: {
   variant?: DividerVariant;
   tone?: "gold" | "cream" | "sogan";
-  className?: string;
+  className?: string | undefined;
 }) {
   return (
     <div

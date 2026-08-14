@@ -13,10 +13,10 @@ export function GebyokPanel({
   units = 6,
   strokeWidth = 0.9,
 }: {
-  className?: string;
+  className?: string | undefined;
   side?: "left" | "right";
-  units?: number;
-  strokeWidth?: number;
+  units?: number | undefined;
+  strokeWidth?: number | undefined;
 }) {
   const W = 160;
   const unitH = 150;
@@ -109,8 +109,8 @@ export function GebyokFrame({
   panelClassName,
 }: {
   children: React.ReactNode;
-  className?: string;
-  panelClassName?: string;
+  className?: string | undefined;
+  panelClassName?: string | undefined;
 }) {
   return (
     <div className={cn("relative", className)}>

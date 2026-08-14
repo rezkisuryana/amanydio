@@ -7,7 +7,7 @@ import { dotRow, patra, smooth, sulur, type Pt } from "./geometry";
  * (halus character type). Dark brown leather body, gold tatahan piercing.
  */
 
-type WayangProps = { className?: string; strokeWidth?: number };
+type WayangProps = { className?: string | undefined; strokeWidth?: number };
 
 const goldDefs = (id: string) => (
   <defs>

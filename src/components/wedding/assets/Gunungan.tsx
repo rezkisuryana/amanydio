@@ -101,9 +101,9 @@ export function Gunungan({
   strokeWidth = 1,
   filled = true,
 }: {
-  className?: string;
-  strokeWidth?: number;
-  filled?: boolean;
+  className?: string | undefined;
+  strokeWidth?: number | undefined;
+  filled?: boolean | undefined;
 }) {
   return (
     <svg

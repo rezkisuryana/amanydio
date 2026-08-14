@@ -20,9 +20,9 @@ export function BatikPattern({
   scale = 1,
 }: {
   variant?: BatikVariant;
-  className?: string;
-  opacity?: number;
-  scale?: number;
+  className?: string | undefined;
+  opacity?: number | undefined;
+  scale?: number | undefined;
 }) {
   const uid = useId().replace(/:/g, "");
   const id = `batik-${variant}-${uid}`;
@@ -171,7 +171,7 @@ export function BatikRibbon({
   className,
 }: {
   variant?: BatikVariant;
-  className?: string;
+  className?: string | undefined;
 }) {
   return (
     <div aria-hidden="true" className={cn("relative h-16 w-full overflow-hidden text-sogan", className)}>
