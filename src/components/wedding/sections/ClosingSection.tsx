@@ -4,9 +4,12 @@ import { weddingConfig } from "@/config/weddingConfig";
 import { silk, viewportOnce } from "@/lib/motion-variants";
 import {
   BatikPattern,
-  FloralOrnament,
+  GebyokPanel,
   Gunungan,
+  JogloLineArt,
+  MelatiField,
   OrnamentalDivider,
+  SulurVine,
 } from "../JavaneseOrnaments";
 import { ParticleBackground } from "../ParticleBackground";
 
@@ -18,7 +21,24 @@ export function ClosingSection() {
       aria-label="Penutup undangan"
       className="relative isolate overflow-hidden surface-dark px-5 pt-24 pb-32 sm:px-8 sm:pt-32 sm:pb-24"
     >
-      <BatikPattern variant="sidomukti" opacity={0.1} className="mix-blend-screen" />
+      <BatikPattern variant="sidomukti" opacity={0.12} tone="gold" className="mix-blend-screen" />
+      <MelatiField count={8} tone="gold" className="opacity-70" />
+
+      {/* Joglo silhouette far behind */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-16 mx-auto h-40 w-[min(96vw,820px)] text-gold/15 sm:h-56"
+      >
+        <JogloLineArt />
+      </div>
+
+      {/* Gebyok posts */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 opacity-50 sm:w-14 lg:w-20">
+        <GebyokPanel side="left" units={7} />
+      </div>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 opacity-50 sm:w-14 lg:w-20">
+        <GebyokPanel side="right" units={7} />
+      </div>
       <ParticleBackground count={16} />
 
       {/* Gunungan rising from the bottom */}
@@ -42,17 +62,17 @@ export function ClosingSection() {
         viewport={{ once: true, amount: 0.2 }}
         transition={silk(1.6, 0.2)}
       >
-        <FloralOrnament />
+        <SulurVine />
       </motion.div>
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-6 bottom-10 h-64 w-24 -scale-x-100 text-gold/40 sm:right-2 sm:h-80 sm:w-32"
+        className="pointer-events-none absolute -right-6 bottom-10 h-64 w-24 text-gold/40 sm:right-2 sm:h-80 sm:w-32"
         initial={{ x: 90, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={silk(1.6, 0.35)}
       >
-        <FloralOrnament />
+        <SulurVine flip />
       </motion.div>
 
       <div className="relative mx-auto max-w-xl text-center">

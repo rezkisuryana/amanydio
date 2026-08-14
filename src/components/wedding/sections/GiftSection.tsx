@@ -3,7 +3,12 @@ import { Home } from "lucide-react";
 
 import { weddingConfig } from "@/config/weddingConfig";
 import { silk, viewportOnce } from "@/lib/motion-variants";
-import { BatikPattern, CornerOrnament, OrnamentalDivider } from "../JavaneseOrnaments";
+import {
+  BatikPattern,
+  CornerOrnament,
+  GebyokPanel,
+  OrnamentalDivider,
+} from "../JavaneseOrnaments";
 import { CopyButton } from "../CopyButton";
 import { SectionTitle } from "../primitives";
 
@@ -16,13 +21,21 @@ export function GiftSection() {
       aria-label="Wedding gift"
       className="relative isolate overflow-hidden bg-cream paper-grain px-5 py-24 sm:px-8 sm:py-32"
     >
-      <BatikPattern variant="kawung" opacity={0.06} />
+      <BatikPattern variant="sidomukti" opacity={0.07} />
+
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 opacity-40 sm:w-12 lg:w-16">
+        <GebyokPanel side="left" units={5} />
+      </div>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 opacity-40 sm:w-12 lg:w-16">
+        <GebyokPanel side="right" units={5} />
+      </div>
 
       <div className="relative mx-auto max-w-3xl">
         <SectionTitle
           eyebrow="Wedding Gift"
           title={gift.title}
           subtitle={gift.note}
+          divider="rail"
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2">

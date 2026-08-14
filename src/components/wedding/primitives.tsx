@@ -17,6 +17,7 @@ import {
   type VariantName,
 } from "@/lib/motion-variants";
 import { OrnamentalDivider } from "./JavaneseOrnaments";
+import type { DividerVariant } from "./assets/Dividers";
 
 /* ------------------------------------------------------------------ */
 /* AnimatedReveal                                                      */
@@ -147,6 +148,7 @@ export function SectionTitle({
   tone = "dark",
   className,
   as = "h2",
+  divider = "batik",
 }: {
   eyebrow?: string;
   title: string;
@@ -154,6 +156,7 @@ export function SectionTitle({
   tone?: "dark" | "light";
   className?: string;
   as?: "h1" | "h2";
+  divider?: DividerVariant;
 }) {
   const Heading = as;
   const light = tone === "light";
@@ -182,7 +185,11 @@ export function SectionTitle({
         </Heading>
       </StaggerItem>
       <StaggerItem>
-        <OrnamentalDivider className="mt-5" tone={light ? "cream" : "gold"} />
+        <OrnamentalDivider
+          className="mt-5"
+          tone={light ? "cream" : "gold"}
+          variant={divider}
+        />
       </StaggerItem>
       {subtitle ? (
         <StaggerItem>

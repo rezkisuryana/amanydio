@@ -6,9 +6,12 @@ import { weddingConfig } from "@/config/weddingConfig";
 import { silk } from "@/lib/motion-variants";
 import {
   BatikPattern,
-  FloralOrnament,
+  FloralCorner,
   Gunungan,
+  MelatiField,
   OrnamentalDivider,
+  WayangBride,
+  WayangGroom,
 } from "./JavaneseOrnaments";
 import { ParticleBackground } from "./ParticleBackground";
 import { OrnateButton } from "./primitives";
@@ -47,7 +50,7 @@ export function WeddingCover({
         animate={{ opacity: opening ? 0.3 : 0.16 }}
         transition={silk(2, 0.9)}
       >
-        <BatikPattern variant="parang" opacity={1} className="mix-blend-screen" />
+        <BatikPattern variant="parang" opacity={1} tone="gold" className="mix-blend-screen" />
       </motion.div>
 
       {/* Layer: moving golden light */}
@@ -72,21 +75,51 @@ export function WeddingCover({
       {/* Floral ornaments left / right */}
       <motion.div
         aria-hidden="true"
-        className="absolute -left-6 top-1/2 h-[62vh] w-28 -translate-y-1/2 text-gold/45 sm:left-2 sm:w-40"
+        className="absolute -left-8 bottom-0 h-[58vh] w-28 opacity-70 sm:left-2 sm:w-40"
         initial={{ opacity: 0, x: -70 }}
         animate={opening ? { opacity: 0, x: -140 } : { opacity: 1, x: 0 }}
         transition={silk(opening ? 1 : 1.6, opening ? 0 : 1.1)}
       >
-        <FloralOrnament />
+        <WayangGroom />
       </motion.div>
       <motion.div
         aria-hidden="true"
-        className="absolute -right-6 top-1/2 h-[62vh] w-28 -translate-y-1/2 -scale-x-100 text-gold/45 sm:right-2 sm:w-40"
+        className="absolute -right-8 bottom-0 h-[58vh] w-28 opacity-70 sm:right-2 sm:w-40"
         initial={{ opacity: 0, x: 70 }}
         animate={opening ? { opacity: 0, x: 140 } : { opacity: 1, x: 0 }}
         transition={silk(opening ? 1 : 1.6, opening ? 0 : 1.35)}
       >
-        <FloralOrnament />
+        <WayangBride />
+      </motion.div>
+
+      {/* Floral corners (sulur + melati) */}
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-0 top-0 size-28 text-gold/45 sm:size-40"
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: opening ? 0 : 1, scale: 1 }}
+        transition={silk(1.4, opening ? 0 : 0.7)}
+      >
+        <FloralCorner />
+      </motion.div>
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 bottom-0 size-28 text-gold/45 sm:size-40"
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: opening ? 0 : 1, scale: 1 }}
+        transition={silk(1.4, opening ? 0 : 0.85)}
+      >
+        <FloralCorner flipX flipY />
+      </motion.div>
+
+      {/* Floating melati */}
+      <motion.div
+        className="absolute inset-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={silk(1.6, 0.6)}
+      >
+        <MelatiField count={9} tone="gold" />
       </motion.div>
 
       {/* Gunungan */}
@@ -189,7 +222,7 @@ export function WeddingCover({
         }
         transition={{ duration: 1.25, delay: opening ? 0.85 : 0, ease: [0.22, 1, 0.36, 1] }}
       >
-        <BatikPattern variant="truntum" opacity={0.14} />
+        <BatikPattern variant="truntum" opacity={0.16} />
       </motion.div>
     </motion.div>
   );
