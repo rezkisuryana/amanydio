@@ -11,7 +11,7 @@ export function PrayerSection() {
       aria-label="Doa untuk pengantin"
       className="relative isolate overflow-hidden surface-dark px-6 py-28 sm:py-36"
     >
-      <BatikPattern variant="parang" opacity={0.1} className="mix-blend-screen" />
+      <BatikPattern variant="parang" opacity={0.12} tone="gold" className="mix-blend-screen" />
       <ParticleBackground count={14} />
 
       <ParallaxElement
@@ -28,7 +28,7 @@ export function PrayerSection() {
           </p>
         </StaggerItem>
         <StaggerItem>
-          <OrnamentalDivider className="mt-5" tone="cream" />
+          <OrnamentalDivider className="mt-5" tone="cream" variant="gunungan" />
         </StaggerItem>
         <StaggerItem variant="scaleIn">
           <p
@@ -50,7 +50,7 @@ export function PrayerSection() {
           </p>
         </StaggerItem>
         <StaggerItem>
-          <OrnamentalDivider className="mt-10" tone="cream" />
+          <OrnamentalDivider className="mt-10" tone="cream" variant="melati" />
         </StaggerItem>
       </StaggerGroup>
     </section>

@@ -5,8 +5,10 @@ import { silk } from "@/lib/motion-variants";
 import {
   BatikPattern,
   CornerOrnament,
-  FloralOrnament,
+  GebyokPanel,
+  MelatiField,
   OrnamentalDivider,
+  SulurVine,
 } from "../JavaneseOrnaments";
 import { ParticleBackground } from "../ParticleBackground";
 import { ParallaxElement } from "../primitives";
@@ -18,22 +20,32 @@ export function HeroSection() {
     <section
       id="home"
       aria-label="Undangan pernikahan"
-      className="relative isolate overflow-hidden surface-paper paper-grain px-5 pt-20 pb-24 sm:px-8 sm:pt-24"
+      className="relative isolate overflow-hidden surface-paper paper-grain paper-fiber px-5 pt-20 pb-24 sm:px-8 sm:pt-24"
     >
       <BatikPattern variant="kawung" opacity={0.07} />
       <ParticleBackground count={9} />
 
+      <MelatiField count={7} tone="sogan" className="opacity-60" />
+
+      {/* Gebyok posts framing the invitation */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 opacity-45 sm:w-14 lg:w-20">
+        <GebyokPanel side="left" units={8} />
+      </div>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 opacity-45 sm:w-14 lg:w-20">
+        <GebyokPanel side="right" units={8} />
+      </div>
+
       <ParallaxElement
         speed={0.5}
-        className="pointer-events-none absolute -left-10 top-24 h-72 w-24 text-sogan/25 sm:left-0 sm:h-96 sm:w-36"
+        className="pointer-events-none absolute -left-4 top-24 h-72 w-20 text-sogan/25 sm:left-10 sm:h-96 sm:w-28"
       >
-        <FloralOrnament />
+        <SulurVine />
       </ParallaxElement>
       <ParallaxElement
         speed={0.4}
-        className="pointer-events-none absolute -right-10 bottom-24 h-72 w-24 -scale-x-100 text-sogan/25 sm:right-0 sm:h-96 sm:w-36"
+        className="pointer-events-none absolute -right-4 bottom-24 h-72 w-20 text-sogan/25 sm:right-10 sm:h-96 sm:w-28"
       >
-        <FloralOrnament />
+        <SulurVine flip />
       </ParallaxElement>
 
       <div className="relative mx-auto max-w-2xl text-center">
@@ -75,7 +87,7 @@ export function HeroSection() {
           transition={silk(1.6, 1)}
           className="relative mx-auto mt-12 w-[min(84vw,340px)]"
         >
-          <div className="relative arch-mask overflow-hidden frame-gold shadow-ornate">
+          <div className="group relative arch-mask overflow-hidden frame-ukiran">
             <motion.img
               src={photos.hero}
               alt={`${couple.groom.nickname} dan ${couple.bride.nickname} dalam busana adat Jawa`}
@@ -101,7 +113,7 @@ export function HeroSection() {
           </div>
 
           <div className="absolute inset-x-0 -bottom-4 flex justify-center">
-            <span className="batik-truntum border border-gold/50 bg-ivory/90 px-4 py-1.5 font-sans text-[0.5rem] tracking-royal uppercase text-sogan">
+            <span className="border border-gold/50 bg-ivory/90 px-4 py-1.5 font-sans text-[0.5rem] tracking-royal uppercase text-sogan">
               Sugeng Rawuh
             </span>
           </div>

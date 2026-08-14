@@ -8,6 +8,8 @@ import {
   CornerOrnament,
   JogloLineArt,
   OrnamentalDivider,
+  WayangBride,
+  WayangGroom,
 } from "../JavaneseOrnaments";
 import { OrnateButton, ParallaxElement, SectionTitle } from "../primitives";
 
@@ -38,11 +40,25 @@ export function EventSection() {
         </motion.div>
       </ParallaxElement>
 
+      <ParallaxElement
+        speed={0.35}
+        className="pointer-events-none absolute -left-4 top-24 h-64 w-20 opacity-30 sm:left-2 sm:h-80 sm:w-28"
+      >
+        <WayangGroom />
+      </ParallaxElement>
+      <ParallaxElement
+        speed={0.35}
+        className="pointer-events-none absolute -right-4 top-24 h-64 w-20 opacity-30 sm:right-2 sm:h-80 sm:w-28"
+      >
+        <WayangBride />
+      </ParallaxElement>
+
       <div className="relative mx-auto max-w-4xl">
         <SectionTitle
           eyebrow="Pawai & Pesta"
           title="Rangkaian Acara"
           subtitle="Insya Allah acara akan diselenggarakan pada waktu dan tempat berikut."
+          divider="wayang"
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">

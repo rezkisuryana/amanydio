@@ -6,8 +6,9 @@ import { silk, viewportOnce } from "@/lib/motion-variants";
 import {
   BatikPattern,
   CornerOrnament,
-  FloralOrnament,
+  MelatiField,
   OrnamentalDivider,
+  SulurVine,
   WayangPair,
 } from "../JavaneseOrnaments";
 import { ParallaxElement, SectionTitle } from "../primitives";
@@ -30,7 +31,8 @@ export function CoupleSection() {
       aria-label="Pinanganten"
       className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-24 sm:px-8 sm:py-32"
     >
-      <BatikPattern variant="truntum" opacity={0.08} />
+      <BatikPattern variant="truntum" opacity={0.09} />
+      <MelatiField count={8} tone="sogan" className="opacity-60" />
 
       <ParallaxElement
         speed={0.25}
@@ -44,6 +46,7 @@ export function CoupleSection() {
           eyebrow="Pinanganten"
           title="Kedua Mempelai"
           subtitle="Dengan penuh rasa syukur, kami memperkenalkan calon pengantin yang akan mengikat janji suci."
+          divider="truntum" as unknown as never
         />
 
         <div className="mt-16 grid gap-16 sm:mt-20 md:grid-cols-2 md:gap-10">
