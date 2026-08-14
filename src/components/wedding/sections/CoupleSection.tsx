@@ -46,7 +46,7 @@ export function CoupleSection() {
           eyebrow="Pinanganten"
           title="Kedua Mempelai"
           subtitle="Dengan penuh rasa syukur, kami memperkenalkan calon pengantin yang akan mengikat janji suci."
-          divider="truntum" as unknown as never
+          divider="melati"
         />
 
         <div className="mt-16 grid gap-16 sm:mt-20 md:grid-cols-2 md:gap-10">
