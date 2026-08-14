@@ -431,12 +431,6 @@
   }
 }
 
-/* Traditional kayon arch (pointed keraton arch, not a plain rounded box) */
-@utility arch-kayon {
-  clip-path: path(
-    "M0 100% L0 42% C0 20% 22% 6% 50% 0 C78% 6% 100% 20% 100% 42% L100% 100% Z"
-  );
-}
 
 @utility animate-float-slow {
   animation: float-slow 7s var(--ease-silk) infinite;
