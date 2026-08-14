@@ -18,11 +18,13 @@ export function BatikPattern({
   className,
   opacity = 0.12,
   scale = 1,
+  tone = "sogan",
 }: {
   variant?: BatikVariant;
   className?: string | undefined;
   opacity?: number | undefined;
   scale?: number | undefined;
+  tone?: "sogan" | "gold" | "cream" | undefined;
 }) {
   const uid = useId().replace(/:/g, "");
   const id = `batik-${variant}-${uid}`;
@@ -31,7 +33,11 @@ export function BatikPattern({
   return (
     <div
       aria-hidden="true"
-      className={cn("pointer-events-none absolute inset-0", className)}
+      className={cn(
+        "pointer-events-none absolute inset-0",
+        tone === "gold" ? "text-gold" : tone === "cream" ? "text-cream" : "text-sogan",
+        className,
+      )}
       style={{ opacity }}
     >
       <svg className="h-full w-full" aria-hidden="true">
