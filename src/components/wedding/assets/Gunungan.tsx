@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-import { dotRow, fmt, mirrorX, patra, poly, scallopEdge, smooth, sulur, type Pt } from "./geometry";
+import { dotRow, fmt, mirrorX, patra, scallopEdge, smooth, sulur, type Pt } from "./geometry";
 
 /* ------------------------------------------------------------------ */
 /* Generated geometry — a real tatahan-style gunungan contour          */
