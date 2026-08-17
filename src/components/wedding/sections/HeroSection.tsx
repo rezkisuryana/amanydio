@@ -4,7 +4,7 @@ import { weddingConfig } from "@/config/weddingConfig";
 import { silk } from "@/lib/motion-variants";
 import {
   BatikPattern,
-  CornerOrnament,
+  FramedPhoto,
   GebyokPanel,
   MelatiField,
   OrnamentalDivider,
