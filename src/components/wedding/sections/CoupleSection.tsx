@@ -91,27 +91,20 @@ function PersonCard({
         transition={silk(1.5, 0.2)}
         className="group relative mx-auto w-[min(72vw,270px)]"
       >
-        <div className="relative arch-mask overflow-hidden frame-gold shadow-ornate">
-          <img
-            src={person.photo}
-            alt={`Foto ${person.name}`}
-            loading="lazy"
-            width={1024}
-            height={1280}
-            className="h-full w-full object-cover transition-transform duration-[1.4s] ease-[var(--ease-silk)] group-hover:scale-[1.06]"
-          />
+        <FramedPhoto
+          src={person.photo}
+          alt={`Foto ${person.name}`}
+          variant="round"
+          width={1024}
+          height={1280}
+          imgClassName="transition-transform duration-[1.4s] ease-[var(--ease-silk)] group-hover:scale-[1.06]"
+        >
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-java-dark/40 to-transparent"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-java-dark/35 to-transparent"
           />
-        </div>
-        <span aria-hidden="true" className="absolute -inset-2.5 arch-mask border border-gold/30" />
-        <div aria-hidden="true" className="absolute -left-4 -top-4 size-10 text-gold/60">
-          <CornerOrnament />
-        </div>
-        <div aria-hidden="true" className="absolute -right-4 -top-4 size-10 text-gold/60">
-          <CornerOrnament flipX />
-        </div>
+        </FramedPhoto>
+
       </motion.figure>
 
       <motion.div
