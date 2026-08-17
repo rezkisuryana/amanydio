@@ -11,6 +11,13 @@ export const javaneseAssets = {
     truntum: `${base}/batik/truntum.webp`,
     sidomukti: `${base}/batik/sidomukti.webp`,
   },
+  /** Gold-on-transparent cutouts of the same motifs, for dark surfaces. */
+  batikGold: {
+    kawung: `${base}/batik/kawung-gold.webp`,
+    parang: `${base}/batik/parang-gold.webp`,
+    truntum: `${base}/batik/truntum-gold.webp`,
+    sidomukti: `${base}/batik/sidomukti-gold.webp`,
+  },
   hero: {
     gunungan: `${base}/hero/gunungan.webp`,
     joglo: `${base}/hero/joglo.webp`,
