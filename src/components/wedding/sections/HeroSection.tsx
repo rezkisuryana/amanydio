@@ -87,30 +87,21 @@ export function HeroSection() {
           transition={silk(1.6, 1)}
           className="relative mx-auto mt-12 w-[min(84vw,340px)]"
         >
-          <div className="group relative arch-mask overflow-hidden frame-ukiran">
-            <motion.img
-              src={photos.hero}
-              alt={`${couple.groom.nickname} dan ${couple.bride.nickname} dalam busana adat Jawa`}
-              width={1024}
-              height={1408}
-              className="h-full w-full object-cover"
-              initial={{ scale: 1.12 }}
-              animate={{ scale: 1 }}
-              transition={silk(2.4, 1)}
-            />
+          <FramedPhoto
+            src={photos.hero}
+            alt={`${couple.groom.nickname} dan ${couple.bride.nickname} dalam busana adat Jawa`}
+            variant="arch"
+            eager
+            width={1024}
+            height={1408}
+            className="group"
+          >
             <span
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 bg-gradient-to-t from-java-dark/45 via-transparent to-transparent"
             />
-          </div>
+          </FramedPhoto>
 
-          <span aria-hidden="true" className="absolute -inset-3 arch-mask border border-gold/35" />
-          <div aria-hidden="true" className="absolute -left-5 -bottom-5 size-12 text-gold/60">
-            <CornerOrnament flipY />
-          </div>
-          <div aria-hidden="true" className="absolute -right-5 -bottom-5 size-12 text-gold/60">
-            <CornerOrnament flipX flipY />
-          </div>
 
           <div className="absolute inset-x-0 -bottom-4 flex justify-center">
             <span className="border border-gold/50 bg-ivory/90 px-4 py-1.5 font-sans text-[0.5rem] tracking-royal uppercase text-sogan">
