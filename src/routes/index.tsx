@@ -10,7 +10,7 @@ import { FloatingNavigation } from "@/components/wedding/FloatingNavigation";
 import { MusicPlayer } from "@/components/wedding/MusicPlayer";
 import { ScrollProgress } from "@/components/wedding/ScrollProgress";
 import { WeddingCover } from "@/components/wedding/WeddingCover";
-import { BatikRibbon } from "@/components/wedding/JavaneseOrnaments";
+import { SectionSeam } from "@/components/wedding/sections/SectionSeam";
 import { HeroSection } from "@/components/wedding/sections/HeroSection";
 import { QuoteSection } from "@/components/wedding/sections/QuoteSection";
 import { CoupleSection } from "@/components/wedding/sections/CoupleSection";
