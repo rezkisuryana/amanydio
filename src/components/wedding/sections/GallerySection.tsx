@@ -4,7 +4,7 @@ import { useState } from "react";
 import { weddingConfig } from "@/config/weddingConfig";
 import { silk, viewportOnce } from "@/lib/motion-variants";
 import { cn } from "@/lib/utils";
-import { BatikPattern, OrnamentalDivider } from "../JavaneseOrnaments";
+import { BatikPattern, FramedPhoto, MelatiField, OrnamentalDivider } from "../JavaneseOrnaments";
 import { Lightbox } from "../Lightbox";
 import { SectionTitle } from "../primitives";
 
