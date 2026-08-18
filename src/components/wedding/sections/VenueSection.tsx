@@ -16,15 +16,15 @@ export function VenueSection() {
     >
       <BatikPattern variant="kawung" opacity={0.06} />
 
-      <div className="relative mx-auto max-w-3xl">
-        <SectionTitle eyebrow="Papan Panggenan" title="Lokasi Acara" />
+      <div className="relative mx-auto max-w-4xl">
+        <SectionTitle eyebrow="Papan Panggenan" title="Lokasi Acara" divider="rail" />
 
         <motion.div
           initial={{ opacity: 0, y: 36 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
           transition={silk(1.2)}
-          className="relative mx-auto mt-12 max-w-2xl border border-gold/40 bg-ivory/90 p-3 shadow-ornate sm:p-4"
+          className="relative mx-auto mt-14 w-full border border-gold/40 bg-ivory/90 p-3 shadow-ornate sm:p-4"
         >
           <div aria-hidden="true" className="absolute -left-2 -top-2 size-9 text-gold/70">
             <CornerOrnament />
@@ -45,9 +45,10 @@ export function VenueSection() {
               src={venue.googleMapsEmbed}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-56 w-full grayscale-[0.35] sepia-[0.18] sm:h-72"
+              className="h-72 w-full grayscale-[0.3] sepia-[0.15] sm:h-[26rem] lg:h-[34rem]"
             />
           </div>
+
 
           <div className="relative px-2 py-6 text-center">
             <h3 className="font-display text-2xl text-java-brown sm:text-3xl">{venue.name}</h3>
