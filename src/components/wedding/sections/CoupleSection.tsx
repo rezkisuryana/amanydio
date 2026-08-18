@@ -29,14 +29,27 @@ export function CoupleSection() {
     <section
       id="couple"
       aria-label="Pinanganten"
-      className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-20 sm:px-8 sm:py-28"
+      className="relative isolate overflow-hidden surface-paper paper-grain vignette-paper px-5 py-20 sm:px-8 sm:py-28"
     >
-      <BatikPattern variant="truntum" opacity={0.09} />
-      <MelatiField count={8} tone="sogan" className="opacity-60" />
+      <BatikPattern variant="truntum" opacity={0.06} className="mask-fade-edges" />
+      <MelatiField count={6} tone="sogan" className="opacity-40" />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -left-3 w-9 opacity-20 mask-fade-y sm:w-14"
+      >
+        <GebyokPanel side="left" units={7} />
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -right-3 w-9 opacity-20 mask-fade-y sm:w-14"
+      >
+        <GebyokPanel side="right" units={7} />
+      </div>
 
       <ParallaxElement
         speed={0.25}
-        className="pointer-events-none absolute left-1/2 bottom-0 h-64 w-[min(92vw,520px)] -translate-x-1/2 text-sogan/15"
+        className="pointer-events-none absolute left-1/2 bottom-0 h-72 w-[min(96vw,560px)] -translate-x-1/2 text-sogan/10"
       >
         <WayangPair />
       </ParallaxElement>
@@ -49,7 +62,7 @@ export function CoupleSection() {
           divider="melati"
         />
 
-        <div className="mt-16 grid gap-16 sm:mt-20 md:grid-cols-2 md:gap-10">
+        <div className="mt-20 grid gap-20 sm:mt-24 md:grid-cols-2 md:gap-12">
           <PersonCard person={couple.bride} label="The Bride" from="left" />
           <div className="relative flex items-center justify-center md:hidden">
             <span className="font-script text-5xl text-gold">&amp;</span>
@@ -57,13 +70,14 @@ export function CoupleSection() {
           <PersonCard person={couple.groom} label="The Groom" from="right" />
         </div>
 
-        <div className="relative mt-6 hidden justify-center md:flex">
-          <span className="font-script text-5xl text-gold">&amp;</span>
+        <div className="relative mt-8 hidden justify-center md:flex">
+          <span className="font-script text-6xl text-gold">&amp;</span>
         </div>
 
-        <OrnamentalDivider className="mt-14" />
+        <OrnamentalDivider className="mt-16" variant="batik" />
       </div>
     </section>
+
   );
 }
 
