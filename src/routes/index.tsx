@@ -10,7 +10,7 @@ import { FloatingNavigation } from "@/components/wedding/FloatingNavigation";
 import { MusicPlayer } from "@/components/wedding/MusicPlayer";
 import { ScrollProgress } from "@/components/wedding/ScrollProgress";
 import { WeddingCover } from "@/components/wedding/WeddingCover";
-import { BatikRibbon } from "@/components/wedding/JavaneseOrnaments";
+import { SectionSeam } from "@/components/wedding/sections/SectionSeam";
 import { HeroSection } from "@/components/wedding/sections/HeroSection";
 import { QuoteSection } from "@/components/wedding/sections/QuoteSection";
 import { CoupleSection } from "@/components/wedding/sections/CoupleSection";
@@ -89,21 +89,26 @@ function Invitation() {
         className="relative"
       >
         <HeroSection />
-        <BatikRibbon variant="parang" />
+        <SectionSeam variant="ornament" from="paper" to="cream" />
         <QuoteSection />
+        <SectionSeam variant="melati" from="cream" to="paper" />
         <CoupleSection />
-        <BatikRibbon variant="kawung" />
+        <SectionSeam variant="batik" from="paper" to="dark" />
         <CountdownSection />
         <EventSection />
+        <SectionSeam variant="rail" from="cream" to="paper" />
         <VenueSection />
         <BatikReveal variant="parang" tone="dark" />
         <GallerySection />
+        <SectionSeam variant="gunungan" from="cream" to="paper" />
         <LoveStorySection />
-        <BatikRibbon variant="sidomukti" />
+        <SectionSeam variant="ornament" from="paper" to="cream" />
         <GiftSection />
+        <SectionSeam variant="melati" from="cream" to="paper" />
         <RsvpWishesSection />
         <PrayerSection />
         <ClosingSection />
+
       </motion.main>
     </>
   );

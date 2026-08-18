@@ -19,14 +19,14 @@ export function GiftSection() {
     <section
       id="gift"
       aria-label="Wedding gift"
-      className="relative isolate overflow-hidden bg-cream paper-grain px-5 py-24 sm:px-8 sm:py-32"
+      className="relative isolate overflow-hidden bg-cream paper-grain vignette-paper px-5 py-20 sm:px-8 sm:py-28"
     >
-      <BatikPattern variant="sidomukti" opacity={0.07} />
+      <BatikPattern variant="sidomukti" opacity={0.05} className="mask-fade-edges" />
 
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 opacity-40 sm:w-12 lg:w-16">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 opacity-[0.09] mix-blend-multiply mask-fade-y sm:w-12 lg:w-16">
         <GebyokPanel side="left" units={5} />
       </div>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 opacity-40 sm:w-12 lg:w-16">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 opacity-[0.09] mix-blend-multiply mask-fade-y sm:w-12 lg:w-16">
         <GebyokPanel side="right" units={5} />
       </div>
 
@@ -38,7 +38,7 @@ export function GiftSection() {
           divider="rail"
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
+        <div className="mt-16 grid gap-7 sm:grid-cols-2">
           {gift.bankAccounts.map((acc, i) => (
             <motion.article
               key={acc.bank}

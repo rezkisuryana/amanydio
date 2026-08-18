@@ -9,9 +9,9 @@ export function PrayerSection() {
   return (
     <section
       aria-label="Doa untuk pengantin"
-      className="relative isolate overflow-hidden surface-dark px-6 py-28 sm:py-36"
+      className="relative isolate overflow-hidden surface-dark vignette-dark px-6 py-20 sm:py-28"
     >
-      <BatikPattern variant="parang" opacity={0.12} tone="gold" className="mix-blend-screen" />
+      <BatikPattern variant="parang" opacity={0.12} tone="gold" className="mask-fade-edges" />
       <ParticleBackground count={14} />
 
       <ParallaxElement

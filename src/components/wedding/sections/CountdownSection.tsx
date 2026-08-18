@@ -45,9 +45,9 @@ export function CountdownSection() {
   return (
     <section
       aria-label="Menuju hari bahagia"
-      className="relative isolate overflow-hidden surface-dark px-5 py-24 sm:px-8 sm:py-32"
+      className="relative isolate overflow-hidden surface-dark vignette-dark px-5 py-20 sm:px-8 sm:py-28"
     >
-      <BatikPattern variant="parang" opacity={0.14} className="mix-blend-screen" />
+      <BatikPattern variant="parang" opacity={0.14} tone="gold" className="mask-fade-edges" />
       <ParticleBackground count={12} />
 
       <div className="relative mx-auto max-w-3xl">

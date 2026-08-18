@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { MailOpen } from "lucide-react";
 import { useState } from "react";
 
@@ -41,8 +41,10 @@ export function WeddingCover({
       className="fixed inset-0 z-[80] overflow-hidden surface-dark"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } }}
       transition={silk(1.1)}
     >
+
       {/* Layer: batik */}
       <motion.div
         className="absolute inset-0"
@@ -141,13 +143,12 @@ export function WeddingCover({
       </motion.div>
 
       {/* Content */}
-      <AnimatePresence>
-        {!opening ? (
-          <motion.div
-            key="cover-content"
-            className="relative z-10 flex min-h-full flex-col items-center justify-center px-6 py-16 text-center"
-            exit={{ opacity: 0, y: -20, transition: silk(0.7) }}
-          >
+      <motion.div
+        className={`relative z-10 flex min-h-full flex-col items-center justify-center px-6 py-16 text-center ${opening ? "pointer-events-none" : ""}`}
+        animate={opening ? { opacity: 0, y: -20 } : { opacity: 1, y: 0 }}
+        transition={silk(0.7)}
+      >
+        <div className="contents">
             <motion.p
               className="font-sans text-[0.58rem] tracking-royal uppercase text-gold/85 sm:text-[0.66rem]"
               initial={{ opacity: 0, y: 18 }}
@@ -206,9 +207,8 @@ export function WeddingCover({
                 Buka Undangan
               </OrnateButton>
             </motion.div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+        </div>
+      </motion.div>
 
       {/* Opening wipe: dark brown -> cream, revealed from the centre */}
       <motion.div

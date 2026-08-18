@@ -6,11 +6,13 @@ import { silk, viewportOnce } from "@/lib/motion-variants";
 import {
   BatikPattern,
   FramedPhoto,
+  GebyokPanel,
   MelatiField,
   OrnamentalDivider,
   SulurVine,
   WayangPair,
 } from "../JavaneseOrnaments";
+
 import { ParallaxElement, SectionTitle } from "../primitives";
 
 type Person = {
@@ -29,14 +31,27 @@ export function CoupleSection() {
     <section
       id="couple"
       aria-label="Pinanganten"
-      className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-24 sm:px-8 sm:py-32"
+      className="relative isolate overflow-hidden surface-paper paper-grain vignette-paper px-5 py-20 sm:px-8 sm:py-28"
     >
-      <BatikPattern variant="truntum" opacity={0.09} />
-      <MelatiField count={8} tone="sogan" className="opacity-60" />
+      <BatikPattern variant="truntum" opacity={0.06} className="mask-fade-edges" />
+      <MelatiField count={6} tone="sogan" className="opacity-40" />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -left-3 w-8 opacity-[0.1] mix-blend-multiply mask-fade-y sm:w-12"
+      >
+        <GebyokPanel side="left" units={7} />
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -right-3 w-8 opacity-[0.1] mix-blend-multiply mask-fade-y sm:w-12"
+      >
+        <GebyokPanel side="right" units={7} />
+      </div>
 
       <ParallaxElement
         speed={0.25}
-        className="pointer-events-none absolute left-1/2 bottom-0 h-64 w-[min(92vw,520px)] -translate-x-1/2 text-sogan/15"
+        className="pointer-events-none absolute left-1/2 bottom-0 h-72 w-[min(96vw,560px)] -translate-x-1/2 opacity-[0.07] mix-blend-multiply"
       >
         <WayangPair />
       </ParallaxElement>
@@ -49,7 +64,7 @@ export function CoupleSection() {
           divider="melati"
         />
 
-        <div className="mt-16 grid gap-16 sm:mt-20 md:grid-cols-2 md:gap-10">
+        <div className="mt-20 grid gap-20 sm:mt-24 md:grid-cols-2 md:gap-12">
           <PersonCard person={couple.bride} label="The Bride" from="left" />
           <div className="relative flex items-center justify-center md:hidden">
             <span className="font-script text-5xl text-gold">&amp;</span>
@@ -57,13 +72,14 @@ export function CoupleSection() {
           <PersonCard person={couple.groom} label="The Groom" from="right" />
         </div>
 
-        <div className="relative mt-6 hidden justify-center md:flex">
-          <span className="font-script text-5xl text-gold">&amp;</span>
+        <div className="relative mt-8 hidden justify-center md:flex">
+          <span className="font-script text-6xl text-gold">&amp;</span>
         </div>
 
-        <OrnamentalDivider className="mt-14" />
+        <OrnamentalDivider className="mt-16" variant="batik" />
       </div>
     </section>
+
   );
 }
 
@@ -89,7 +105,7 @@ function PersonCard({
         whileInView={{ clipPath: "inset(0% 0% 0% 0%)", scale: 1 }}
         viewport={viewportOnce}
         transition={silk(1.5, 0.2)}
-        className="group relative mx-auto w-[min(72vw,270px)]"
+        className="group relative mx-auto w-[min(78vw,330px)]"
       >
         <FramedPhoto
           src={person.photo}
@@ -109,7 +125,7 @@ function PersonCard({
 
       <motion.div
         aria-hidden="true"
-        className="mx-auto mt-6 h-10 w-16 text-gold/70"
+        className="mx-auto mt-8 h-10 w-16 text-gold/70"
         initial={{ scale: 0.3, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={viewportOnce}
@@ -118,15 +134,18 @@ function PersonCard({
         <SulurVine className="rotate-90" />
       </motion.div>
 
-      <p className="mt-2 font-sans text-[0.55rem] tracking-royal uppercase text-gold">{label}</p>
-      <h3 className="mt-3 font-display text-3xl text-java-brown sm:text-4xl">{person.name}</h3>
-      <p className="mt-4 font-sans text-[0.72rem] leading-relaxed text-muted-clay">
+      <p className="mt-3 font-sans text-[0.58rem] tracking-royal uppercase text-gold">{label}</p>
+      <h3 className="mt-4 font-display text-[2.1rem] leading-[1.1] text-java-brown sm:text-[2.6rem]">
+        {person.name}
+      </h3>
+      <p className="mx-auto mt-5 max-w-xs font-sans text-[0.8rem] leading-relaxed text-muted-clay">
         {person.order}
         <br />
         <span className="text-java-brown/85">
           {person.parents[0]} &amp; {person.parents[1]}
         </span>
       </p>
+
 
       <a
         href={`https://instagram.com/${person.instagram}`}

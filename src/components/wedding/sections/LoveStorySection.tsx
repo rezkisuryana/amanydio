@@ -20,12 +20,12 @@ export function LoveStorySection() {
   return (
     <section
       aria-label="Kisah kami"
-      className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-24 sm:px-8 sm:py-32"
+      className="relative isolate overflow-hidden surface-paper paper-grain vignette-paper px-5 py-20 sm:px-8 sm:py-28"
     >
-      <BatikPattern variant="sidomukti" opacity={0.05} />
+      <BatikPattern variant="kawung" opacity={0.045} className="mask-fade-edges" />
       <ParallaxElement
         speed={0.45}
-        className="pointer-events-none absolute -right-8 top-32 h-80 w-24 -scale-x-100 text-sogan/20 sm:w-32"
+        className="pointer-events-none absolute -right-8 top-32 h-80 w-24 -scale-x-100 text-sogan/14 blur-[0.5px] sm:w-32"
       >
         <FloralOrnament />
       </ParallaxElement>
@@ -83,7 +83,7 @@ export function LoveStorySection() {
                     <h3 className="mt-2 font-serif text-lg tracking-wide-sm text-java-brown sm:text-xl">
                       {item.title}
                     </h3>
-                    <p className="mt-3 font-sans text-[0.76rem] leading-relaxed text-muted-clay">
+                    <p className="mt-4 font-sans text-[0.85rem] leading-relaxed text-muted-clay">
                       {item.text}
                     </p>
                   </div>
