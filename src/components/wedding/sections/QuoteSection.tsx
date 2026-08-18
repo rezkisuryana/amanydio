@@ -9,7 +9,7 @@ export function QuoteSection() {
   return (
     <section
       aria-label="Ayem Tentrem"
-      className="relative isolate overflow-hidden bg-cream paper-grain paper-fiber px-6 py-24 sm:py-32"
+      className="relative isolate overflow-hidden bg-cream paper-grain paper-fiber px-6 py-20 sm:py-28"
     >
       <BatikPattern variant="sidomukti" opacity={0.06} />
       <ParticleBackground count={8} />

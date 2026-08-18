@@ -19,7 +19,7 @@ export function ClosingSection() {
   return (
     <footer
       aria-label="Penutup undangan"
-      className="relative isolate overflow-hidden surface-dark px-5 pt-24 pb-32 sm:px-8 sm:pt-32 sm:pb-24"
+      className="relative isolate overflow-hidden surface-dark px-5 pt-20 pb-28 sm:px-8 sm:pt-32 sm:pb-24"
     >
       <BatikPattern variant="sidomukti" opacity={0.12} tone="gold" className="mix-blend-screen" />
       <MelatiField count={8} tone="gold" className="opacity-70" />
