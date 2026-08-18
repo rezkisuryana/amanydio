@@ -177,7 +177,7 @@ export function SectionTitle({
       <StaggerItem>
         <Heading
           className={cn(
-            "mt-3 font-display text-[2rem] leading-[1.1] tracking-tight sm:text-5xl",
+            "mt-4 font-display text-section-title tracking-tight",
             light ? "text-cream" : "text-java-brown",
           )}
         >
@@ -186,7 +186,7 @@ export function SectionTitle({
       </StaggerItem>
       <StaggerItem>
         <OrnamentalDivider
-          className="mt-5"
+          className="mt-6"
           tone={light ? "cream" : "gold"}
           variant={divider}
         />
@@ -195,7 +195,7 @@ export function SectionTitle({
         <StaggerItem>
           <p
             className={cn(
-              "mx-auto mt-5 max-w-md font-sans text-[0.82rem] leading-relaxed sm:text-sm",
+              "mx-auto mt-6 max-w-[34rem] font-sans text-body-lg",
               light ? "text-cream/70" : "text-muted-clay",
             )}
           >
@@ -203,6 +203,7 @@ export function SectionTitle({
           </p>
         </StaggerItem>
       ) : null}
+
     </StaggerGroup>
   );
 }
