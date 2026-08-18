@@ -50,12 +50,15 @@ export function VenueSection() {
           </div>
 
 
-          <div className="relative px-2 py-6 text-center">
-            <h3 className="font-display text-2xl text-java-brown sm:text-3xl">{venue.name}</h3>
-            <p className="mx-auto mt-3 max-w-sm font-sans text-[0.75rem] leading-relaxed text-muted-clay">
+          <div className="relative px-2 py-8 text-center">
+            <h3 className="font-display text-[1.9rem] text-java-brown sm:text-[2.4rem]">
+              {venue.name}
+            </h3>
+            <p className="mx-auto mt-4 max-w-md font-sans text-body-lg text-muted-clay">
               {venue.address}
             </p>
-            <div className="mt-6 flex justify-center">
+            <div className="mt-7 flex justify-center">
+
               <OrnateButton
                 href={venue.googleMapsUrl}
                 tone="solid"
