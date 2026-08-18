@@ -144,7 +144,7 @@ export function WeddingCover({
 
       {/* Content */}
       <motion.div
-        className="relative z-10 flex min-h-full flex-col items-center justify-center px-6 py-16 text-center"
+        className={`relative z-10 flex min-h-full flex-col items-center justify-center px-6 py-16 text-center ${opening ? "pointer-events-none" : ""}`}
         animate={opening ? { opacity: 0, y: -20 } : { opacity: 1, y: 0 }}
         transition={silk(0.7)}
       >
