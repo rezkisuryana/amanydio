@@ -29,10 +29,10 @@ export function HeroSection() {
       {/* Layer 1 — batik, whisper quiet and faded at the edges */}
       <BatikPattern variant="kawung" opacity={0.05} className="mask-fade-edges" />
 
-      {/* Layer 2 — pendopo architecture, far behind */}
+      {/* Layer 2 — pendopo architecture, a faint watermark far behind */}
       <ParallaxElement
         speed={0.15}
-        className="pointer-events-none absolute inset-x-0 top-10 mx-auto h-64 w-[min(112vw,900px)] text-sogan/12 sm:h-80"
+        className="pointer-events-none absolute inset-x-0 bottom-24 -z-10 mx-auto h-56 w-[min(120vw,940px)] opacity-[0.07] mix-blend-multiply mask-fade-edges sm:h-72"
       >
         <JogloLineArt />
       </ParallaxElement>
@@ -40,7 +40,7 @@ export function HeroSection() {
       {/* Layer 3 — gunungan behind the names, single focal glow */}
       <ParallaxElement
         speed={0.22}
-        className="pointer-events-none absolute left-1/2 top-4 h-[64vh] w-[min(84vw,430px)] -translate-x-1/2 opacity-[0.16] sm:top-0 sm:h-[72vh]"
+        className="pointer-events-none absolute left-1/2 top-4 h-[64vh] w-[min(84vw,430px)] -translate-x-1/2 opacity-[0.1] mix-blend-multiply sm:top-0 sm:h-[72vh]"
       >
         <Gunungan className="animate-float-slow" />
       </ParallaxElement>
@@ -48,13 +48,13 @@ export function HeroSection() {
       {/* Layer 4 — gebyok columns, cropped by the viewport edge */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 -left-3 w-10 opacity-25 mask-fade-y sm:w-16 lg:w-24"
+        className="pointer-events-none absolute inset-y-0 -left-3 w-8 opacity-[0.1] mix-blend-multiply mask-fade-y sm:w-12 lg:w-16"
       >
         <GebyokPanel side="left" units={8} />
       </div>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 -right-3 w-10 opacity-25 mask-fade-y sm:w-16 lg:w-24"
+        className="pointer-events-none absolute inset-y-0 -right-3 w-8 opacity-[0.1] mix-blend-multiply mask-fade-y sm:w-12 lg:w-16"
       >
         <GebyokPanel side="right" units={8} />
       </div>
@@ -62,13 +62,13 @@ export function HeroSection() {
       {/* Layer 5 — wayang guardians, half out of frame */}
       <ParallaxElement
         speed={0.3}
-        className="pointer-events-none absolute -left-16 bottom-0 hidden h-[62vh] w-40 opacity-20 blur-[0.6px] md:block"
+        className="pointer-events-none absolute -left-16 bottom-0 hidden h-[62vh] w-40 opacity-[0.08] mix-blend-multiply blur-[0.7px] md:block"
       >
         <WayangGroom />
       </ParallaxElement>
       <ParallaxElement
         speed={0.3}
-        className="pointer-events-none absolute -right-16 bottom-0 hidden h-[62vh] w-40 opacity-20 blur-[0.6px] md:block"
+        className="pointer-events-none absolute -right-16 bottom-0 hidden h-[62vh] w-40 opacity-[0.08] mix-blend-multiply blur-[0.7px] md:block"
       >
         <WayangBride />
       </ParallaxElement>
@@ -76,7 +76,7 @@ export function HeroSection() {
       {/* Layer 6 — floral corners cropped into the composition */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-6 -top-6 size-32 text-sogan/30 sm:size-44"
+        className="pointer-events-none absolute -left-6 -top-6 size-32 text-sogan/25 sm:size-40"
       >
         <FloralCorner />
       </div>

@@ -38,20 +38,20 @@ export function CoupleSection() {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 -left-3 w-9 opacity-20 mask-fade-y sm:w-14"
+        className="pointer-events-none absolute inset-y-0 -left-3 w-8 opacity-[0.1] mix-blend-multiply mask-fade-y sm:w-12"
       >
         <GebyokPanel side="left" units={7} />
       </div>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 -right-3 w-9 opacity-20 mask-fade-y sm:w-14"
+        className="pointer-events-none absolute inset-y-0 -right-3 w-8 opacity-[0.1] mix-blend-multiply mask-fade-y sm:w-12"
       >
         <GebyokPanel side="right" units={7} />
       </div>
 
       <ParallaxElement
         speed={0.25}
-        className="pointer-events-none absolute left-1/2 bottom-0 h-72 w-[min(96vw,560px)] -translate-x-1/2 text-sogan/10"
+        className="pointer-events-none absolute left-1/2 bottom-0 h-72 w-[min(96vw,560px)] -translate-x-1/2 opacity-[0.07] mix-blend-multiply"
       >
         <WayangPair />
       </ParallaxElement>

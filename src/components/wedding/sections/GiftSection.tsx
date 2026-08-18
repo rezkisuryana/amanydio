@@ -23,10 +23,10 @@ export function GiftSection() {
     >
       <BatikPattern variant="sidomukti" opacity={0.05} className="mask-fade-edges" />
 
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 opacity-20 mask-fade-y sm:w-12 lg:w-16">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 opacity-[0.09] mix-blend-multiply mask-fade-y sm:w-12 lg:w-16">
         <GebyokPanel side="left" units={5} />
       </div>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 opacity-20 mask-fade-y sm:w-12 lg:w-16">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 opacity-[0.09] mix-blend-multiply mask-fade-y sm:w-12 lg:w-16">
         <GebyokPanel side="right" units={5} />
       </div>
 
