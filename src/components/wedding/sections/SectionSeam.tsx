@@ -91,7 +91,7 @@ export function SectionSeam({
       >
         {variant === "ornament" ? (
           <div className="h-8 w-24 opacity-80 sm:h-10 sm:w-28">
-            <GoldOrnament variant="motif" />
+            <GoldOrnament name="flourish" />
           </div>
         ) : (
           <div className="w-full max-w-xs opacity-85">
