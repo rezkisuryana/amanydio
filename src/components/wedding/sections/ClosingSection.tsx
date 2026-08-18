@@ -7,6 +7,7 @@ import {
   GebyokPanel,
   Gunungan,
   JogloLineArt,
+  FramedPhoto,
   MelatiField,
   OrnamentalDivider,
   SulurVine,
@@ -81,18 +82,15 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={viewportOnce}
           transition={silk(1.5)}
-          className="relative mx-auto w-[min(60vw,220px)]"
+          className="relative mx-auto w-[min(66vw,260px)]"
         >
-          <div className="overflow-hidden rounded-full border border-gold/45">
-            <img
-              src={photos.closing}
-              alt={`${couple.groom.nickname} dan ${couple.bride.nickname}`}
-              loading="lazy"
-              width={1200}
-              height={1200}
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <FramedPhoto
+            src={photos.closing}
+            alt={`${couple.groom.nickname} dan ${couple.bride.nickname}`}
+            variant="round"
+            width={1200}
+            height={1200}
+          />
           <span
             aria-hidden="true"
             className="absolute -inset-3 rounded-full border border-dashed border-gold/30"

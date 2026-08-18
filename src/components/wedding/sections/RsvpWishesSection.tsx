@@ -5,7 +5,12 @@ import { toast } from "sonner";
 
 import { silk, viewportOnce } from "@/lib/motion-variants";
 import { cn } from "@/lib/utils";
-import { BatikPattern, CornerOrnament, OrnamentalDivider } from "../JavaneseOrnaments";
+import {
+  BatikPattern,
+  CornerOrnament,
+  MelatiField,
+  OrnamentalDivider,
+} from "../JavaneseOrnaments";
 import { OrnateButton, SectionTitle } from "../primitives";
 
 type Attendance = "hadir" | "ragu" | "tidak";
@@ -96,6 +101,7 @@ export function RsvpWishesSection() {
       className="relative isolate overflow-hidden surface-paper paper-grain vignette-paper px-5 py-20 sm:px-8 sm:py-28"
     >
       <BatikPattern variant="truntum" opacity={0.05} className="mask-fade-edges" />
+      <MelatiField count={5} tone="sogan" className="opacity-35" />
 
       <div className="relative mx-auto max-w-3xl">
         <SectionTitle
