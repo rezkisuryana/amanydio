@@ -24,7 +24,7 @@ export function HeroSection() {
     <section
       id="home"
       aria-label="Undangan pernikahan"
-      className="relative isolate overflow-hidden surface-paper paper-grain paper-fiber vignette-paper px-5 pt-16 pb-20 sm:px-8 sm:pt-20 sm:pb-24"
+      className="relative isolate overflow-hidden surface-paper paper-grain paper-fiber vignette-paper px-5 pt-16 pb-20 sm:px-8 sm:pt-20 sm:pb-20"
     >
       {/* Layer 1 — batik, whisper quiet and faded at the edges */}
       <BatikPattern variant="kawung" opacity={0.05} className="mask-fade-edges" />

@@ -12,7 +12,7 @@ export function VenueSection() {
   return (
     <section
       aria-label="Lokasi acara"
-      className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-24 sm:px-8 sm:py-32"
+      className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-20 sm:px-8 sm:py-28"
     >
       <BatikPattern variant="kawung" opacity={0.06} />
 

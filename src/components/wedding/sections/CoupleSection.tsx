@@ -29,7 +29,7 @@ export function CoupleSection() {
     <section
       id="couple"
       aria-label="Pinanganten"
-      className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-24 sm:px-8 sm:py-32"
+      className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-20 sm:px-8 sm:py-28"
     >
       <BatikPattern variant="truntum" opacity={0.09} />
       <MelatiField count={8} tone="sogan" className="opacity-60" />

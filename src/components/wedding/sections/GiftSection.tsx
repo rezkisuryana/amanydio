@@ -19,7 +19,7 @@ export function GiftSection() {
     <section
       id="gift"
       aria-label="Wedding gift"
-      className="relative isolate overflow-hidden bg-cream paper-grain px-5 py-24 sm:px-8 sm:py-32"
+      className="relative isolate overflow-hidden bg-cream paper-grain px-5 py-20 sm:px-8 sm:py-28"
     >
       <BatikPattern variant="sidomukti" opacity={0.07} />
 
