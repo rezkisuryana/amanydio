@@ -19,24 +19,24 @@ export function ClosingSection() {
   return (
     <footer
       aria-label="Penutup undangan"
-      className="relative isolate overflow-hidden surface-dark px-5 pt-20 pb-28 sm:px-8 sm:pt-28 sm:pb-20"
+      className="relative isolate overflow-hidden surface-dark vignette-dark px-5 pt-20 pb-28 sm:px-8 sm:pt-28 sm:pb-20"
     >
-      <BatikPattern variant="sidomukti" opacity={0.12} tone="gold" className="mix-blend-screen" />
+      <BatikPattern variant="sidomukti" opacity={0.12} tone="gold" className="mask-fade-edges" />
       <MelatiField count={8} tone="gold" className="opacity-70" />
 
       {/* Joglo silhouette far behind */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-16 mx-auto h-40 w-[min(96vw,820px)] text-gold/15 sm:h-56"
+        className="pointer-events-none absolute inset-x-0 bottom-16 mx-auto h-40 w-[min(96vw,820px)] text-gold/12 sm:h-56"
       >
         <JogloLineArt />
       </div>
 
       {/* Gebyok posts */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 opacity-50 sm:w-14 lg:w-20">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 opacity-25 mask-fade-y sm:w-14 lg:w-20">
         <GebyokPanel side="left" units={7} />
       </div>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 opacity-50 sm:w-14 lg:w-20">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 opacity-25 mask-fade-y sm:w-14 lg:w-20">
         <GebyokPanel side="right" units={7} />
       </div>
       <ParticleBackground count={16} />
@@ -104,7 +104,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
           transition={silk(1.3, 0.2)}
-          className="mt-10 font-display text-[2.6rem] leading-none text-gold-gradient sm:text-6xl"
+          className="mt-12 font-display text-[3rem] leading-[0.95] text-gold-gradient sm:text-[4.5rem]"
         >
           {closing.title}
         </motion.h2>
@@ -116,7 +116,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
           transition={silk(1.1, 0.35)}
-          className="mx-auto mt-7 max-w-md font-sans text-[0.78rem] leading-relaxed text-cream/70"
+          className="mx-auto mt-8 max-w-md font-sans text-body-lg text-cream/70"
         >
           {closing.text}
         </motion.p>
@@ -148,7 +148,7 @@ export function ClosingSection() {
           transition={silk(2.1, 0.4)}
           className="mt-16"
         >
-          <p className="font-display text-xl uppercase text-cream sm:text-3xl">
+          <p className="font-display text-2xl uppercase text-cream sm:text-4xl">
             {couple.groom.nickname} &amp; {couple.bride.nickname}
           </p>
           <p className="mt-4 font-sans text-[0.55rem] tracking-royal uppercase text-gold/80">

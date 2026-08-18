@@ -93,9 +93,9 @@ export function RsvpWishesSection() {
   return (
     <section
       aria-label="Konfirmasi kehadiran dan ucapan"
-      className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-20 sm:px-8 sm:py-28"
+      className="relative isolate overflow-hidden surface-paper paper-grain vignette-paper px-5 py-20 sm:px-8 sm:py-28"
     >
-      <BatikPattern variant="truntum" opacity={0.06} />
+      <BatikPattern variant="truntum" opacity={0.05} className="mask-fade-edges" />
 
       <div className="relative mx-auto max-w-3xl">
         <SectionTitle
@@ -114,7 +114,7 @@ export function RsvpWishesSection() {
           }
           transition={{ duration: 0.45 }}
           initial={false}
-          className="relative mt-14 border border-gold/40 bg-ivory/90 px-5 py-8 shadow-ornate sm:px-8"
+          className="relative mt-16 border border-gold/40 bg-ivory/95 px-5 py-10 shadow-ornate sm:px-10 sm:py-12"
         >
           <div aria-hidden="true" className="absolute -left-2 -top-2 size-9 text-gold/70">
             <CornerOrnament />
