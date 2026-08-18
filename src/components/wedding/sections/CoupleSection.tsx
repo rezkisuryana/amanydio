@@ -6,11 +6,13 @@ import { silk, viewportOnce } from "@/lib/motion-variants";
 import {
   BatikPattern,
   FramedPhoto,
+  GebyokPanel,
   MelatiField,
   OrnamentalDivider,
   SulurVine,
   WayangPair,
 } from "../JavaneseOrnaments";
+
 import { ParallaxElement, SectionTitle } from "../primitives";
 
 type Person = {
