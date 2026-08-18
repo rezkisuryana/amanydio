@@ -105,7 +105,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={silk(1.3, 0.55)}
-          className="mt-6 font-display text-hero-names text-java-brown"
+          className="mt-6 font-display text-[clamp(2.75rem,12.5vw,6.25rem)] leading-[0.92] text-java-brown"
         >
           <span className="block">{couple.groom.nickname}</span>
           <span className="my-1 block font-script text-[0.42em] leading-none text-gold">
@@ -158,7 +158,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={silk(1.1, 1.7)}
-          className="mx-auto mt-16 max-w-[30rem] font-sans text-body-lg text-muted-clay"
+          className="mx-auto mt-16 max-w-[30rem] font-sans text-[clamp(0.9rem,1.6vw,1.0625rem)] leading-[1.75] text-muted-clay"
         >
           Assalamu&apos;alaikum Warahmatullahi Wabarakatuh. Dengan memohon rahmat dan ridho
           Allah SWT, kami bermaksud menyelenggarakan pahargyan pernikahan putra-putri kami.

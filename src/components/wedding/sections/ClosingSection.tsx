@@ -114,7 +114,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
           transition={silk(1.1, 0.35)}
-          className="mx-auto mt-8 max-w-md font-sans text-body-lg text-cream/70"
+          className="mx-auto mt-8 max-w-md font-sans text-[clamp(0.9rem,1.6vw,1.0625rem)] leading-[1.75] text-cream/70"
         >
           {closing.text}
         </motion.p>

@@ -177,7 +177,7 @@ export function SectionTitle({
       <StaggerItem>
         <Heading
           className={cn(
-            "mt-4 font-display text-section-title tracking-tight",
+            "mt-4 font-display text-[clamp(2rem,5.6vw,3.5rem)] leading-[1.06] tracking-tight",
             light ? "text-cream" : "text-java-brown",
           )}
         >
@@ -195,7 +195,7 @@ export function SectionTitle({
         <StaggerItem>
           <p
             className={cn(
-              "mx-auto mt-6 max-w-[34rem] font-sans text-body-lg",
+              "mx-auto mt-6 max-w-[34rem] font-sans text-[clamp(0.9rem,1.6vw,1.0625rem)] leading-[1.75]",
               light ? "text-cream/70" : "text-muted-clay",
             )}
           >

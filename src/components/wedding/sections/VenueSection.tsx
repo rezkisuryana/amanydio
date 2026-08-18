@@ -54,7 +54,7 @@ export function VenueSection() {
             <h3 className="font-display text-[1.9rem] text-java-brown sm:text-[2.4rem]">
               {venue.name}
             </h3>
-            <p className="mx-auto mt-4 max-w-md font-sans text-body-lg text-muted-clay">
+            <p className="mx-auto mt-4 max-w-md font-sans text-[clamp(0.9rem,1.6vw,1.0625rem)] leading-[1.75] text-muted-clay">
               {venue.address}
             </p>
             <div className="mt-7 flex justify-center">
