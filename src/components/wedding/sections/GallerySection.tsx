@@ -27,38 +27,44 @@ export function GallerySection() {
           eyebrow="Pandhita Sarira"
           title="Galeri Kami"
           subtitle="Sekelumit momen yang kami rangkai dalam kenangan."
+          divider="gunungan"
         />
 
-        {/* Hero image */}
-        <motion.button
-          type="button"
-          onClick={() => setOpenIndex(0)}
-          initial={{ clipPath: "inset(18% 0% 18% 0%)", opacity: 0 }}
-          whileInView={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1 }}
+        {/* One featured, ornamentally framed image — the anchor of the grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 34 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
-          transition={silk(1.5)}
-          aria-label="Buka galeri foto"
-          className="group relative mt-14 block w-full overflow-hidden border border-gold/35"
+          transition={silk(1.4)}
+          className="mx-auto mt-16 w-[min(82vw,360px)]"
         >
-          <img
-            src={photos.hero}
-            alt={`${couple.groom.nickname} dan ${couple.bride.nickname}`}
-            loading="lazy"
-            width={1024}
-            height={1408}
-            className="h-[46vh] w-full object-cover object-top transition-transform duration-[1.6s] ease-[var(--ease-silk)] group-hover:scale-[1.05] sm:h-[62vh]"
-          />
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-java-dark/70 via-java-dark/10 to-transparent"
-          />
-          <span className="pointer-events-none absolute inset-x-0 bottom-6 font-sans text-[0.55rem] tracking-royal uppercase text-cream/85">
+          <button
+            type="button"
+            onClick={() => setOpenIndex(0)}
+            aria-label="Buka galeri foto"
+            className="group block w-full"
+          >
+            <FramedPhoto
+              src={photos.hero}
+              alt={`${couple.groom.nickname} dan ${couple.bride.nickname}`}
+              variant="arch"
+              width={1024}
+              height={1408}
+              imgClassName="transition-transform duration-[1.6s] ease-[var(--ease-silk)] group-hover:scale-[1.05]"
+            >
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-java-dark/55 via-transparent to-transparent"
+              />
+            </FramedPhoto>
+          </button>
+          <p className="mt-5 text-center font-sans text-[0.55rem] tracking-royal uppercase text-sogan/75">
             Ketuk untuk melihat galeri
-          </span>
-        </motion.button>
+          </p>
+        </motion.div>
 
-        {/* Masonry-ish overlapping grid */}
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:grid-cols-4 sm:gap-4">
+        {/* Supporting grid — unframed, quiet, editorial */}
+        <div className="mt-16 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
           {gallery.map((item, i) => (
             <motion.button
               key={item.src + i}
@@ -70,7 +76,7 @@ export function GallerySection() {
               transition={silk(1.2, (i % 4) * 0.1)}
               aria-label={`Buka foto: ${item.alt}`}
               className={cn(
-                "group relative overflow-hidden border border-gold/30",
+                "group relative overflow-hidden border border-gold/25",
                 item.span === "tall" ? "row-span-2 aspect-[3/4]" : "aspect-[4/3]",
                 i === 0 && "sm:col-span-2",
               )}
@@ -93,29 +99,8 @@ export function GallerySection() {
           ))}
         </div>
 
-        {/* Horizontal filmstrip */}
-        <div className="mt-8 -mx-4 overflow-x-auto no-scrollbar px-4 sm:mx-0 sm:px-0">
-          <div className="flex gap-3 pb-2">
-            {gallery.map((item, i) => (
-              <button
-                key={`strip-${i}`}
-                type="button"
-                onClick={() => setOpenIndex(i)}
-                aria-label={`Buka foto: ${item.alt}`}
-                className="group relative h-28 w-40 shrink-0 overflow-hidden border border-gold/25 sm:h-32 sm:w-48"
-              >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-              </button>
-            ))}
-          </div>
-        </div>
+        <OrnamentalDivider className="mt-16" variant="melati" />
 
-        <OrnamentalDivider className="mt-12" />
       </div>
 
       <Lightbox
