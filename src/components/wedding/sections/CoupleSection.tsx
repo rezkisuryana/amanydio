@@ -105,7 +105,7 @@ function PersonCard({
         whileInView={{ clipPath: "inset(0% 0% 0% 0%)", scale: 1 }}
         viewport={viewportOnce}
         transition={silk(1.5, 0.2)}
-        className="group relative mx-auto w-[min(72vw,270px)]"
+        className="group relative mx-auto w-[min(78vw,330px)]"
       >
         <FramedPhoto
           src={person.photo}
@@ -125,7 +125,7 @@ function PersonCard({
 
       <motion.div
         aria-hidden="true"
-        className="mx-auto mt-6 h-10 w-16 text-gold/70"
+        className="mx-auto mt-8 h-10 w-16 text-gold/70"
         initial={{ scale: 0.3, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={viewportOnce}
@@ -134,15 +134,18 @@ function PersonCard({
         <SulurVine className="rotate-90" />
       </motion.div>
 
-      <p className="mt-2 font-sans text-[0.55rem] tracking-royal uppercase text-gold">{label}</p>
-      <h3 className="mt-3 font-display text-3xl text-java-brown sm:text-4xl">{person.name}</h3>
-      <p className="mt-4 font-sans text-[0.72rem] leading-relaxed text-muted-clay">
+      <p className="mt-3 font-sans text-[0.58rem] tracking-royal uppercase text-gold">{label}</p>
+      <h3 className="mt-4 font-display text-[2.1rem] leading-[1.1] text-java-brown sm:text-[2.6rem]">
+        {person.name}
+      </h3>
+      <p className="mx-auto mt-5 max-w-xs font-sans text-[0.8rem] leading-relaxed text-muted-clay">
         {person.order}
         <br />
         <span className="text-java-brown/85">
           {person.parents[0]} &amp; {person.parents[1]}
         </span>
       </p>
+
 
       <a
         href={`https://instagram.com/${person.instagram}`}
