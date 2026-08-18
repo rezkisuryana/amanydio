@@ -513,3 +513,67 @@
     transition-duration: 0.08ms !important;
   }
 }
+
+/* ---------- Refinement pass: composition helpers ---------- */
+
+/* Fade decorative tiles away from the edges so no repeat seam is visible */
+@utility mask-fade-edges {
+  mask-image: radial-gradient(ellipse 82% 78% at 50% 45%, black 28%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 82% 78% at 50% 45%, black 28%, transparent 100%);
+}
+
+@utility mask-fade-y {
+  mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+}
+
+@utility mask-fade-in-x {
+  mask-image: linear-gradient(to right, black 0%, black 45%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 45%, transparent 100%);
+}
+
+/* Hero couple names — one clear focal scale */
+@utility text-hero-names {
+  font-size: clamp(2.75rem, 12.5vw, 6.25rem);
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+}
+
+@utility text-section-title {
+  font-size: clamp(2rem, 5.6vw, 3.5rem);
+  line-height: 1.06;
+}
+
+@utility text-body-lg {
+  font-size: clamp(0.9rem, 1.6vw, 1.0625rem);
+  line-height: 1.75;
+}
+
+/* Soft ambient vignette to keep centre focus on dark surfaces */
+@utility vignette-dark {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse 78% 66% at 50% 42%,
+      transparent 40%,
+      oklch(0.223 0.031 45.2 / 0.72) 100%
+    );
+  }
+}
+
+@utility vignette-paper {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse 80% 70% at 50% 40%,
+      transparent 45%,
+      oklch(0.494 0.076 55.4 / 0.13) 100%
+    );
+  }
+}
