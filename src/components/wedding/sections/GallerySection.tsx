@@ -18,9 +18,11 @@ export function GallerySection() {
     <section
       id="gallery"
       aria-label="Galeri"
-      className="relative isolate overflow-hidden bg-cream paper-grain px-4 py-20 sm:px-8 sm:py-28"
+      className="relative isolate overflow-hidden bg-cream paper-grain vignette-paper px-4 py-20 sm:px-8 sm:py-28"
     >
-      <BatikPattern variant="truntum" opacity={0.07} />
+      <BatikPattern variant="truntum" opacity={0.055} className="mask-fade-edges" />
+      <MelatiField count={5} tone="sogan" className="opacity-35" />
+
 
       <div className="relative mx-auto max-w-5xl">
         <SectionTitle
