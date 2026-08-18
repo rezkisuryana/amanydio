@@ -41,8 +41,10 @@ export function WeddingCover({
       className="fixed inset-0 z-[80] overflow-hidden surface-dark"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } }}
       transition={silk(1.1)}
     >
+
       {/* Layer: batik */}
       <motion.div
         className="absolute inset-0"
