@@ -1,10 +1,5 @@
 import { weddingConfig } from "@/config/weddingConfig";
-import {
-  BatikPattern,
-  Gunungan,
-  MelatiField,
-  OrnamentalDivider,
-} from "../JavaneseOrnaments";
+import { BatikPattern, GoldOrnament, KantilSprig } from "../JavaneseOrnaments";
 import { ParallaxElement, StaggerGroup, StaggerItem } from "../primitives";
 
 export function QuoteSection() {
@@ -13,39 +8,44 @@ export function QuoteSection() {
   return (
     <section
       aria-label="Ayem Tentrem"
-      className="relative isolate overflow-hidden bg-cream paper-grain paper-fiber vignette-paper px-6 py-20 sm:py-28"
+      className="relative isolate overflow-hidden bg-cream paper-grain paper-fiber px-6 py-24 sm:py-32"
     >
-      <BatikPattern variant="sidomukti" opacity={0.05} className="mask-fade-edges" />
-      <MelatiField count={5} tone="sogan" className="opacity-40" />
+      <BatikPattern variant="truntum" opacity={0.045} className="mask-fade-edges" />
 
+      {/* single asymmetric jasmine sprig, cropped by the left edge */}
       <ParallaxElement
-        speed={0.3}
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[86%] w-[min(84vw,400px)] -translate-x-1/2 -translate-y-1/2 opacity-[0.1]"
+        speed={0.4}
+        className="pointer-events-none absolute -left-16 top-10 h-72 w-40 opacity-[0.18] mix-blend-multiply sm:-left-10 sm:h-96 sm:w-56"
       >
-        <Gunungan />
+        <KantilSprig />
       </ParallaxElement>
 
-      <StaggerGroup className="relative mx-auto max-w-2xl text-center" stagger={0.18}>
+      <StaggerGroup
+        className="relative mx-auto w-full max-w-[58ch] md:w-[62%] md:max-w-none"
+        stagger={0.16}
+      >
         <StaggerItem>
-          <p className="font-sans text-[0.6rem] tracking-royal uppercase text-sogan/80">
+          <p className="font-sans text-[0.55rem] tracking-royal uppercase text-sogan/70">
             Ayem Tentrem
           </p>
         </StaggerItem>
-        <StaggerItem>
-          <OrnamentalDivider className="mt-6" variant="gunungan" />
-        </StaggerItem>
         <StaggerItem variant="reveal">
-          <blockquote className="mt-10">
-            <p className="font-display text-[1.55rem] leading-[1.45] text-java-brown italic sm:text-[2.15rem]">
+          <blockquote className="mt-9">
+            <p className="font-display text-[clamp(1.75rem,4.2vw,2.9rem)] leading-[1.32] text-java-brown italic">
               &ldquo;{quote.text}&rdquo;
             </p>
-            <footer className="mt-8 font-sans text-[0.62rem] tracking-royal uppercase text-gold">
-              {quote.source}
+            <footer className="mt-9 flex items-center gap-5">
+              <span aria-hidden="true" className="h-px w-14 bg-gold/60" />
+              <span className="font-sans text-[0.6rem] tracking-royal uppercase text-gold">
+                {quote.source}
+              </span>
             </footer>
           </blockquote>
         </StaggerItem>
         <StaggerItem>
-          <OrnamentalDivider className="mt-10" variant="melati" />
+          <div aria-hidden="true" className="mt-14 h-7 w-24 opacity-60">
+            <GoldOrnament name="flourish" />
+          </div>
         </StaggerItem>
       </StaggerGroup>
     </section>
