@@ -6,9 +6,8 @@ import { silk, viewportOnce } from "@/lib/motion-variants";
 import {
   BatikPattern,
   FramedPhoto,
-  GebyokPanel,
+  KantilSprig,
   MelatiField,
-  OrnamentalDivider,
   SulurVine,
   WayangPair,
 } from "../JavaneseOrnaments";
@@ -31,32 +30,28 @@ export function CoupleSection() {
     <section
       id="couple"
       aria-label="Pinanganten"
-      className="relative isolate overflow-hidden surface-paper paper-grain vignette-paper px-5 py-20 sm:px-8 sm:py-28"
+      className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-24 sm:px-8 sm:py-28"
     >
-      <BatikPattern variant="truntum" opacity={0.06} className="mask-fade-edges" />
-      <MelatiField count={6} tone="sogan" className="opacity-40" />
+      <BatikPattern variant="truntum" opacity={0.04} className="mask-fade-edges" />
+      <MelatiField count={5} tone="sogan" className="opacity-30" />
 
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 -left-3 w-8 opacity-[0.1] mix-blend-multiply mask-fade-y sm:w-12"
-      >
-        <GebyokPanel side="left" units={7} />
-      </div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 -right-3 w-8 opacity-[0.1] mix-blend-multiply mask-fade-y sm:w-12"
-      >
-        <GebyokPanel side="right" units={7} />
-      </div>
-
+      {/* wayang couple, a faint silhouette behind the portraits */}
       <ParallaxElement
-        speed={0.25}
-        className="pointer-events-none absolute left-1/2 bottom-0 h-72 w-[min(96vw,560px)] -translate-x-1/2 opacity-[0.07] mix-blend-multiply"
+        speed={0.22}
+        className="pointer-events-none absolute left-1/2 bottom-4 h-[70%] w-[min(104vw,720px)] -translate-x-1/2"
       >
-        <WayangPair />
+        <WayangPair className="mix-blend-multiply opacity-[0.08]" />
       </ParallaxElement>
 
-      <div className="relative mx-auto max-w-5xl">
+      {/* jasmine, only on one side, cropped */}
+      <ParallaxElement
+        speed={0.45}
+        className="pointer-events-none absolute -right-20 top-24 h-80 w-44 -scale-x-100 opacity-[0.16] mix-blend-multiply sm:-right-10 sm:h-[26rem] sm:w-56"
+      >
+        <KantilSprig />
+      </ParallaxElement>
+
+      <div className="relative mx-auto max-w-6xl">
         <SectionTitle
           eyebrow="Pinanganten"
           title="Kedua Mempelai"
@@ -64,22 +59,22 @@ export function CoupleSection() {
           divider="melati"
         />
 
-        <div className="mt-20 grid gap-20 sm:mt-24 md:grid-cols-2 md:gap-12">
+        <div className="mt-20 grid items-start gap-16 sm:mt-24 md:grid-cols-[1fr_auto_1fr] md:gap-8">
           <PersonCard person={couple.bride} label="The Bride" from="left" />
-          <div className="relative flex items-center justify-center md:hidden">
-            <span className="font-script text-5xl text-gold">&amp;</span>
+
+          <div className="relative flex items-center justify-center md:h-full md:pt-40">
+            <span className="font-script text-6xl text-gold sm:text-7xl">&amp;</span>
           </div>
-          <PersonCard person={couple.groom} label="The Groom" from="right" />
-        </div>
 
-        <div className="relative mt-8 hidden justify-center md:flex">
-          <span className="font-script text-6xl text-gold">&amp;</span>
+          <PersonCard
+            person={couple.groom}
+            label="The Groom"
+            from="right"
+            className="md:mt-28"
+          />
         </div>
-
-        <OrnamentalDivider className="mt-16" variant="batik" />
       </div>
     </section>
-
   );
 }
 
@@ -87,25 +82,27 @@ function PersonCard({
   person,
   label,
   from,
+  className,
 }: {
   person: Person;
   label: string;
   from: "left" | "right";
+  className?: string;
 }) {
   return (
     <motion.article
-      initial={{ opacity: 0, x: from === "left" ? -60 : 60 }}
+      initial={{ opacity: 0, x: from === "left" ? -50 : 50 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={viewportOnce}
       transition={silk(1.2)}
-      className="relative text-center"
+      className={className}
     >
       <motion.figure
-        initial={{ clipPath: "inset(12% 12% 12% 12%)", scale: 1.06 }}
+        initial={{ clipPath: "inset(10% 10% 10% 10%)", scale: 1.05 }}
         whileInView={{ clipPath: "inset(0% 0% 0% 0%)", scale: 1 }}
         viewport={viewportOnce}
         transition={silk(1.5, 0.2)}
-        className="group relative mx-auto w-[min(78vw,330px)]"
+        className="group relative mx-auto w-[min(88vw,430px)]"
       >
         <FramedPhoto
           src={person.photo}
@@ -113,49 +110,47 @@ function PersonCard({
           variant="round"
           width={1024}
           height={1280}
-          imgClassName="transition-transform duration-[1.4s] ease-[var(--ease-silk)] group-hover:scale-[1.06]"
+          imgClassName="transition-transform duration-[1.6s] ease-[var(--ease-silk)] group-hover:scale-[1.06]"
         >
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-java-dark/35 to-transparent"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-java-dark/30 to-transparent"
           />
         </FramedPhoto>
-
       </motion.figure>
 
-      <motion.div
-        aria-hidden="true"
-        className="mx-auto mt-8 h-10 w-16 text-gold/70"
-        initial={{ scale: 0.3, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        viewport={viewportOnce}
-        transition={silk(1.1, 0.5)}
-      >
-        <SulurVine className="rotate-90" />
-      </motion.div>
+      <div className="mt-10 text-center md:text-left">
+        <div
+          aria-hidden="true"
+          className="mx-auto h-8 w-12 text-gold/60 md:mx-0"
+        >
+          <SulurVine className="rotate-90" />
+        </div>
 
-      <p className="mt-3 font-sans text-[0.58rem] tracking-royal uppercase text-gold">{label}</p>
-      <h3 className="mt-4 font-display text-[2.1rem] leading-[1.1] text-java-brown sm:text-[2.6rem]">
-        {person.name}
-      </h3>
-      <p className="mx-auto mt-5 max-w-xs font-sans text-[0.8rem] leading-relaxed text-muted-clay">
-        {person.order}
-        <br />
-        <span className="text-java-brown/85">
-          {person.parents[0]} &amp; {person.parents[1]}
-        </span>
-      </p>
+        <p className="mt-4 font-sans text-[0.55rem] tracking-royal uppercase text-gold">
+          {label}
+        </p>
+        <h3 className="mt-4 font-display text-[clamp(2.1rem,4.4vw,3rem)] leading-[1.08] text-java-brown">
+          {person.name}
+        </h3>
+        <p className="mx-auto mt-5 max-w-xs font-sans text-[0.9rem] leading-relaxed text-muted-clay md:mx-0">
+          {person.order}
+          <br />
+          <span className="text-java-brown/85">
+            {person.parents[0]} &amp; {person.parents[1]}
+          </span>
+        </p>
 
-
-      <a
-        href={`https://instagram.com/${person.instagram}`}
-        target="_blank"
-        rel="noreferrer noopener"
-        aria-label={`Instagram ${person.name}`}
-        className="mt-5 inline-flex items-center gap-2 border border-gold/45 px-4 py-2 font-sans text-[0.55rem] tracking-wide-sm uppercase text-sogan transition-all duration-500 hover:border-gold hover:text-java-brown"
-      >
-        <Instagram className="size-3.5" strokeWidth={1.4} />@{person.instagram}
-      </a>
+        <a
+          href={`https://instagram.com/${person.instagram}`}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label={`Instagram ${person.name}`}
+          className="mt-6 inline-flex items-center gap-2 border border-gold/45 px-4 py-2 font-sans text-[0.55rem] tracking-wide-sm uppercase text-sogan transition-all duration-500 hover:border-gold hover:text-java-brown"
+        >
+          <Instagram className="size-3.5" strokeWidth={1.4} />@{person.instagram}
+        </a>
+      </div>
     </motion.article>
   );
 }
