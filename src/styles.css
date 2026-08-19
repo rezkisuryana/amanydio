@@ -577,3 +577,58 @@
     );
   }
 }
+
+/* ---------- Phase 2: cinematic art direction ---------- */
+
+/* Deep Sogan ceremonial surface — no repeating seams, pure gradient */
+@utility surface-sogan {
+  background:
+    radial-gradient(ellipse 92% 62% at 50% 14%, oklch(0.322 0.048 48) 0%, transparent 64%),
+    radial-gradient(ellipse 70% 50% at 50% 100%, oklch(0.28 0.042 46) 0%, transparent 70%),
+    linear-gradient(
+      180deg,
+      oklch(0.201 0.028 44) 0%,
+      oklch(0.245 0.036 46) 45%,
+      oklch(0.178 0.024 43) 100%
+    );
+  color: var(--cream);
+}
+
+/* Cinematic display scale for the opening / closing manuscript */
+@utility text-display-xl {
+  font-size: clamp(3.5rem, 14vw, 7rem);
+  line-height: 0.88;
+  letter-spacing: -0.015em;
+}
+
+@utility text-date-mono {
+  font-size: clamp(4.5rem, 20vw, 11rem);
+  line-height: 0.82;
+  letter-spacing: -0.02em;
+}
+
+@utility mask-fade-bottom {
+  mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+}
+
+@utility mask-fade-top {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 45%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 45%, black 100%);
+}
+
+@keyframes gunungan-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.035);
+    opacity: 1;
+  }
+}
+
+@utility animate-breathe {
+  animation: gunungan-breathe 11s var(--ease-silk) infinite;
+}
