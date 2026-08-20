@@ -6,7 +6,7 @@ import { silk, viewportOnce } from "@/lib/motion-variants";
 import { cn } from "@/lib/utils";
 import { BatikPattern, FramedPhoto } from "../JavaneseOrnaments";
 import { Lightbox } from "../Lightbox";
-import { ParallaxElement, SectionTitle } from "../primitives";
+import { SectionTitle } from "../primitives";
 
 export function GallerySection() {
   const { gallery, photos, couple } = weddingConfig;
@@ -63,37 +63,32 @@ export function GallerySection() {
           {/* supporting masonry — unframed, parallaxed, editorial */}
           <div className="grid grid-cols-2 gap-3 sm:gap-4 md:col-span-7 md:content-center">
             {gallery.map((item, i) => (
-              <ParallaxElement
+              <motion.button
                 key={item.src + i}
-                speed={i % 2 === 0 ? 0.16 : 0.3}
-                className={cn(i === 1 && "col-span-2")}
+                type="button"
+                onClick={() => setOpenIndex(i)}
+                initial={{ opacity: 0, y: 28, scale: 1.03 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={silk(1.1, (i % 3) * 0.12)}
+                aria-label={`Buka foto: ${item.alt}`}
+                className={cn(
+                  "group relative block w-full overflow-hidden border border-gold/20",
+                  item.span === "tall" ? "aspect-[3/4]" : "aspect-[4/3]",
+                  i === 1 && "col-span-2 aspect-[16/9]",
+                )}
               >
-                <motion.button
-                  type="button"
-                  onClick={() => setOpenIndex(i)}
-                  initial={{ clipPath: "inset(0% 0% 100% 0%)", opacity: 0, scale: 1.05 }}
-                  whileInView={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1, scale: 1 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={silk(1.2, (i % 3) * 0.12)}
-                  aria-label={`Buka foto: ${item.alt}`}
-                  className={cn(
-                    "group relative block w-full overflow-hidden border border-gold/20",
-                    item.span === "tall" ? "aspect-[3/4]" : "aspect-[4/3]",
-                    i === 1 && "aspect-[16/9]",
-                  )}
-                >
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-[1.4s] ease-[var(--ease-silk)] group-hover:scale-[1.08]"
-                  />
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 bg-java-dark/0 transition-colors duration-700 group-hover:bg-java-dark/25"
-                  />
-                </motion.button>
-              </ParallaxElement>
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-[1.4s] ease-[var(--ease-silk)] group-hover:scale-[1.08]"
+                />
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-java-dark/0 transition-colors duration-700 group-hover:bg-java-dark/25"
+                />
+              </motion.button>
             ))}
           </div>
         </div>
