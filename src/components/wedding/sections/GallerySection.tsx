@@ -36,7 +36,7 @@ export function GallerySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewportOnce}
             transition={silk(1.4)}
-            className="mx-auto w-[min(86vw,420px)] md:col-span-5 md:mx-0 md:w-full"
+            className="mx-auto w-[min(86vw,420px)] md:col-span-5 md:mx-0 md:w-full md:sticky md:top-20 md:self-start"
           >
             <button
               type="button"
