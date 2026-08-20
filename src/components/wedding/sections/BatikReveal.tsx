@@ -30,7 +30,7 @@ export function BatikReveal({
     <div
       ref={ref}
       aria-hidden="true"
-      className={`relative h-[46vh] overflow-hidden sm:h-[54vh] ${
+      className={`relative h-[26vh] overflow-hidden sm:h-[32vh] ${
         tone === "dark" ? "surface-dark" : "surface-paper"
       }`}
     >
@@ -40,8 +40,8 @@ export function BatikReveal({
       >
         <BatikPattern
           variant={variant}
-          opacity={tone === "dark" ? 0.3 : 0.18}
-          className={tone === "dark" ? "mix-blend-screen" : ""}
+          opacity={tone === "dark" ? 0.18 : 0.12}
+          className={`mask-fade-edges ${tone === "dark" ? "mix-blend-screen" : ""}`}
         />
       </motion.div>
 
