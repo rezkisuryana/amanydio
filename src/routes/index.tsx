@@ -84,31 +84,39 @@ function Invitation() {
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: opened ? 1 : 0 }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         aria-hidden={!opened}
         className="relative"
       >
-        <HeroSection />
-        <SectionSeam variant="ornament" from="paper" to="cream" />
+        {/* cinematic — dark sogan */}
+        <HeroSection guestName={guestName} />
+        <SectionSeam variant="gunungan" from="dark" to="cream" />
+
+        {/* quiet — editorial */}
         <QuoteSection />
-        <SectionSeam variant="melati" from="cream" to="paper" />
         <CoupleSection />
+
+        {/* dramatic — dark pendopo */}
         <SectionSeam variant="batik" from="paper" to="dark" />
         <CountdownSection />
         <EventSection />
-        <SectionSeam variant="rail" from="cream" to="paper" />
+
+        {/* informational */}
+        <SectionSeam variant="rail" from="dark" to="paper" />
         <VenueSection />
         <BatikReveal variant="parang" tone="dark" />
+
+        {/* editorial */}
         <GallerySection />
-        <SectionSeam variant="gunungan" from="cream" to="paper" />
         <LoveStorySection />
+
         <SectionSeam variant="ornament" from="paper" to="cream" />
         <GiftSection />
-        <SectionSeam variant="melati" from="cream" to="paper" />
         <RsvpWishesSection />
         <PrayerSection />
-        <ClosingSection />
 
+        {/* cinematic mirror of the opening */}
+        <ClosingSection />
       </motion.main>
     </>
   );
