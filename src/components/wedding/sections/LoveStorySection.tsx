@@ -3,8 +3,8 @@ import { motion } from "motion/react";
 import { weddingConfig } from "@/config/weddingConfig";
 import { silk, viewportOnce } from "@/lib/motion-variants";
 import { cn } from "@/lib/utils";
-import { BatikPattern, WayangPair } from "../JavaneseOrnaments";
-import { ParallaxElement, SectionTitle } from "../primitives";
+import { BatikPattern } from "../JavaneseOrnaments";
+import { SectionTitle } from "../primitives";
 
 export function LoveStorySection() {
   const { loveStory } = weddingConfig;
@@ -15,14 +15,6 @@ export function LoveStorySection() {
       className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-24 sm:px-8 sm:py-28"
     >
       <BatikPattern variant="parang" opacity={0.04} className="mask-fade-edges" />
-
-      {/* the single wayang appearance of this section */}
-      <ParallaxElement
-        speed={0.3}
-        className="pointer-events-none absolute -left-24 top-1/3 h-[60%] w-[min(70vw,420px)] opacity-[0.07]"
-      >
-        <WayangPair className="mix-blend-multiply" />
-      </ParallaxElement>
 
       <div className="relative mx-auto max-w-6xl">
         <SectionTitle
