@@ -133,7 +133,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
           <p className="mt-6 font-serif text-[1.05rem] tracking-wide-sm uppercase text-gold-soft sm:text-[1.35rem]">
             {dateLabel}
           </p>
-          <p className="mt-2 font-sans text-[0.55rem] tracking-royal uppercase text-cream/45">
+          <p className="mt-2 font-sans text-[0.55rem] tracking-royal uppercase text-cream/60">
             {dateLong}
           </p>
         </motion.div>
@@ -146,7 +146,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
             transition={silk(1.1, 1.45)}
             className="mt-14"
           >
-            <p className="font-sans text-[0.5rem] tracking-royal uppercase text-cream/40">
+            <p className="font-sans text-[0.5rem] tracking-royal uppercase text-gold/70">
               Kepada
             </p>
             <p className="mt-3 font-display text-[1.6rem] leading-tight text-cream/90 sm:text-[2.1rem]">
