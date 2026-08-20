@@ -9,7 +9,6 @@ import {
   KantilSprig,
   MelatiField,
   SulurVine,
-  WayangPair,
 } from "../JavaneseOrnaments";
 
 import { ParallaxElement, SectionTitle } from "../primitives";
@@ -34,14 +33,6 @@ export function CoupleSection() {
     >
       <BatikPattern variant="truntum" opacity={0.04} className="mask-fade-edges" />
       <MelatiField count={5} tone="sogan" className="opacity-30" />
-
-      {/* wayang couple, a faint silhouette behind the portraits */}
-      <ParallaxElement
-        speed={0.22}
-        className="pointer-events-none absolute left-1/2 bottom-4 h-[70%] w-[min(104vw,720px)] -translate-x-1/2"
-      >
-        <WayangPair className="mix-blend-multiply opacity-[0.08]" />
-      </ParallaxElement>
 
       {/* jasmine, only on one side, cropped */}
       <ParallaxElement

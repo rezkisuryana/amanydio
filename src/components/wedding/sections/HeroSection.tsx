@@ -83,18 +83,25 @@ export function HeroSection({ guestName }: { guestName?: string }) {
       >
         <JasmineSwag />
       </ParallaxElement>
-      <MelatiField count={7} tone="gold" className="opacity-60" />
+      <MelatiField count={5} tone="gold" className="opacity-40" />
 
-      {/* Gold dust + floating particles */}
-      <GoldDust opacity={0.22} eager />
-      <ParticleBackground count={14} />
+      {/* Gold dust + floating particles, kept behind a legibility scrim */}
+      <GoldDust opacity={0.12} eager />
+      <ParticleBackground count={10} />
+
+      {/* scrim: keeps the manuscript readable over the ornament */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 size-[min(150vw,900px)] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle,oklch(0.16_0.022_42/0.62)_0%,oklch(0.16_0.022_42/0.34)_42%,transparent_72%)]"
+      />
 
       <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={silk(1, 0.35)}
-          className="font-sans text-[0.58rem] tracking-royal uppercase text-gold/80 sm:text-[0.66rem]"
+          className="font-sans text-[0.7rem] tracking-royal uppercase text-gold-soft sm:text-[0.78rem]"
         >
           The Wedding Of
         </motion.p>
@@ -126,7 +133,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
           <p className="mt-6 font-serif text-[1.05rem] tracking-wide-sm uppercase text-gold-soft sm:text-[1.35rem]">
             {dateLabel}
           </p>
-          <p className="mt-2 font-sans text-[0.55rem] tracking-royal uppercase text-cream/45">
+          <p className="mt-2 font-sans text-[0.62rem] tracking-royal uppercase text-cream/70">
             {dateLong}
           </p>
         </motion.div>
@@ -139,7 +146,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
             transition={silk(1.1, 1.45)}
             className="mt-14"
           >
-            <p className="font-sans text-[0.5rem] tracking-royal uppercase text-cream/40">
+            <p className="font-sans text-[0.62rem] tracking-royal uppercase text-gold/85">
               Kepada
             </p>
             <p className="mt-3 font-display text-[1.6rem] leading-tight text-cream/90 sm:text-[2.1rem]">
@@ -157,7 +164,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
           className="group mt-16 inline-flex flex-col items-center gap-4"
           aria-label="Mulai menelusuri undangan"
         >
-          <span className="font-sans text-[0.5rem] tracking-royal uppercase text-gold/75 transition-colors duration-500 group-hover:text-gold">
+          <span className="font-sans text-[0.62rem] tracking-royal uppercase text-gold/85 transition-colors duration-500 group-hover:text-gold">
             Sugeng Rawuh
           </span>
           <motion.span

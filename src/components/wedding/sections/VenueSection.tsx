@@ -4,7 +4,7 @@ import { Navigation } from "lucide-react";
 import { weddingConfig } from "@/config/weddingConfig";
 import { silk, viewportOnce } from "@/lib/motion-variants";
 import { BatikPattern, CornerOrnament } from "../JavaneseOrnaments";
-import { OrnateButton, SectionTitle } from "../primitives";
+import { OrnateButton } from "../primitives";
 
 export function VenueSection() {
   const { venue } = weddingConfig;
@@ -12,19 +12,53 @@ export function VenueSection() {
   return (
     <section
       aria-label="Lokasi acara"
-      className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-20 sm:px-8 sm:py-28"
+      className="relative isolate overflow-hidden surface-paper paper-grain px-4 py-24 sm:px-8 sm:py-28"
     >
-      <BatikPattern variant="kawung" opacity={0.06} />
+      <BatikPattern variant="kawung" opacity={0.04} className="mask-fade-edges" />
 
-      <div className="relative mx-auto max-w-4xl">
-        <SectionTitle eyebrow="Papan Panggenan" title="Lokasi Acara" divider="rail" />
+      <div className="relative mx-auto max-w-6xl">
+        <div className="grid items-end gap-8 md:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewportOnce}
+            transition={silk(1.1)}
+          >
+            <p className="font-sans text-[0.55rem] tracking-royal uppercase text-sogan/70">
+              Papan Panggenan
+            </p>
+            <h2 className="mt-5 font-display text-[clamp(2rem,5vw,3.4rem)] leading-[1.06] text-java-brown">
+              {venue.name}
+            </h2>
+            <p className="mt-6 max-w-md font-sans text-[0.95rem] leading-[1.8] text-muted-clay">
+              {venue.address}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewportOnce}
+            transition={silk(1.1, 0.15)}
+            className="flex md:justify-end"
+          >
+            <OrnateButton
+              href={venue.googleMapsUrl}
+              tone="solid"
+              ariaLabel="Buka lokasi di Google Maps"
+            >
+              <Navigation className="size-3.5" strokeWidth={1.4} />
+              Google Maps
+            </OrnateButton>
+          </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 36 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
-          transition={silk(1.2)}
-          className="relative mx-auto mt-14 w-full border border-gold/40 bg-ivory/90 p-3 shadow-ornate sm:p-4"
+          transition={silk(1.3, 0.1)}
+          className="relative mt-14 w-full border border-gold/40 bg-ivory/90 p-3 shadow-ornate sm:p-4"
         >
           <div aria-hidden="true" className="absolute -left-2 -top-2 size-9 text-gold/70">
             <CornerOrnament />
@@ -45,29 +79,8 @@ export function VenueSection() {
               src={venue.googleMapsEmbed}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-72 w-full grayscale-[0.3] sepia-[0.15] sm:h-[26rem] lg:h-[34rem]"
+              className="h-[22rem] w-full grayscale-[0.25] sepia-[0.12] sm:h-[32rem] lg:h-[36rem]"
             />
-          </div>
-
-
-          <div className="relative px-2 py-8 text-center">
-            <h3 className="font-display text-[1.9rem] text-java-brown sm:text-[2.4rem]">
-              {venue.name}
-            </h3>
-            <p className="mx-auto mt-4 max-w-md font-sans text-[clamp(0.9rem,1.6vw,1.0625rem)] leading-[1.75] text-muted-clay">
-              {venue.address}
-            </p>
-            <div className="mt-7 flex justify-center">
-
-              <OrnateButton
-                href={venue.googleMapsUrl}
-                tone="solid"
-                ariaLabel="Buka lokasi di Google Maps"
-              >
-                <Navigation className="size-3.5" strokeWidth={1.4} />
-                Google Maps
-              </OrnateButton>
-            </div>
           </div>
         </motion.div>
       </div>
