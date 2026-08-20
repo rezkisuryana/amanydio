@@ -410,7 +410,7 @@ export function FramedPhoto({
   return (
     <div className={cn("relative", className)}>
       <div
-        className="absolute overflow-hidden"
+        className="absolute z-10 overflow-hidden"
         style={{
           left: `${inset.left}%`,
           right: `${inset.right}%`,
