@@ -83,13 +83,20 @@ export function HeroSection({ guestName }: { guestName?: string }) {
       >
         <JasmineSwag />
       </ParallaxElement>
-      <MelatiField count={7} tone="gold" className="opacity-60" />
+      <MelatiField count={5} tone="gold" className="opacity-40" />
 
-      {/* Gold dust + floating particles */}
-      <GoldDust opacity={0.22} eager />
-      <ParticleBackground count={14} />
+      {/* Gold dust + floating particles, kept behind a legibility scrim */}
+      <GoldDust opacity={0.12} eager />
+      <ParticleBackground count={10} />
+
+      {/* scrim: keeps the manuscript readable over the ornament */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 size-[min(150vw,900px)] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle,oklch(0.16_0.022_42/0.62)_0%,oklch(0.16_0.022_42/0.34)_42%,transparent_72%)]"
+      />
 
       <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
