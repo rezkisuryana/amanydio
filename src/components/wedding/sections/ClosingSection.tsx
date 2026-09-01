@@ -6,7 +6,6 @@ import {
   BatikPattern,
   GebyokPanel,
   Gunungan,
-  JogloLineArt,
   FramedPhoto,
   MelatiField,
   OrnamentalDivider,
@@ -25,13 +24,6 @@ export function ClosingSection() {
       <BatikPattern variant="sidomukti" opacity={0.12} tone="gold" className="mask-fade-edges" />
       <MelatiField count={8} tone="gold" className="opacity-70" />
 
-      {/* Joglo silhouette far behind */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-16 -z-10 mx-auto h-40 w-[min(96vw,820px)] opacity-[0.07] mask-fade-edges mix-blend-soft-light sm:h-56"
-      >
-        <JogloLineArt />
-      </div>
 
       {/* Gebyok posts */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 opacity-25 mask-fade-y sm:w-14 lg:w-20">
