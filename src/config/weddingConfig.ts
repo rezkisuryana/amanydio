@@ -12,7 +12,7 @@ export const weddingConfig = {
   couple: {
     groom: {
       name: "Aditya Pratama",
-      nickname: "Aditya",
+      nickname: "Amany",
       order: "Putra dari",
       parents: ["Bapak Budi", "Ibu Ani"],
       instagram: "aditya",
@@ -20,7 +20,7 @@ export const weddingConfig = {
     },
     bride: {
       name: "Sarah Putri",
-      nickname: "Sarah",
+      nickname: "Dio",
       order: "Putri dari",
       parents: ["Bapak Ahmad", "Ibu Siti"],
       instagram: "sarah",
@@ -29,7 +29,7 @@ export const weddingConfig = {
   },
 
   weddingDate: "2026-12-20T09:00:00+07:00",
-  dateLabel: "20 . 12 . 2026",
+  dateLabel: "04 . 10 . 2026",
   dateLong: "20 December 2026",
 
   photos: {
