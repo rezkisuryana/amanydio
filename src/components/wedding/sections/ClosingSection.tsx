@@ -28,7 +28,7 @@ export function ClosingSection() {
       {/* Joglo silhouette far behind */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-16 mx-auto h-40 w-[min(96vw,820px)] text-gold/12 sm:h-56"
+        className="pointer-events-none absolute inset-x-0 bottom-16 -z-10 mx-auto h-40 w-[min(96vw,820px)] opacity-[0.07] mask-fade-edges mix-blend-soft-light sm:h-56"
       >
         <JogloLineArt />
       </div>
