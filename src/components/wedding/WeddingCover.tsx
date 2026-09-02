@@ -155,7 +155,7 @@ export function WeddingCover({
               animate={{ opacity: 1, y: 0 }}
               transition={silk(1.1, 1.9)}
             >
-              The Wedding Of
+              Undangan Pernikahan
             </motion.p>
 
             <motion.h1
