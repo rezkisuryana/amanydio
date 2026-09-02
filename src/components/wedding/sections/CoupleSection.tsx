@@ -28,7 +28,7 @@ export function CoupleSection() {
   return (
     <section
       id="couple"
-      aria-label="Pinanganten"
+      aria-label="Kedua mempelai"
       className="relative isolate overflow-hidden surface-paper paper-grain px-5 py-24 sm:px-8 sm:py-28"
     >
       <BatikPattern variant="truntum" opacity={0.04} className="mask-fade-edges" />
@@ -44,8 +44,8 @@ export function CoupleSection() {
 
       <div className="relative mx-auto max-w-6xl">
         <SectionTitle
-          eyebrow="Pinanganten"
-          title="Kedua Mempelai"
+          eyebrow="Kedua Mempelai"
+          title="Calon Pengantin"
           subtitle="Dengan penuh rasa syukur, kami memperkenalkan calon pengantin yang akan mengikat janji suci."
           divider="melati"
         />

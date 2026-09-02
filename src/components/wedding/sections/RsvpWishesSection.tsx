@@ -36,7 +36,7 @@ const INITIAL_WISHES: Wish[] = [
     attendance: "hadir",
     guests: 2,
     message:
-      "Sugeng pinanggih ing dinten kabagyan. Mugi tansah rukun, ayem, lan tentrem dumugi kaken-kaken ninen-ninen.",
+      "Selamat berbahagia. Semoga selalu rukun, tenteram, dan bahagia sampai kakek-nenek.",
   },
   {
     id: 2,
@@ -88,7 +88,7 @@ export function RsvpWishesSection() {
       ...prev,
     ]);
     setSuccess(true);
-    toast.success("Matur nuwun, konfirmasi Anda telah kami terima.");
+    toast.success("Terima kasih, konfirmasi Anda telah kami terima.");
     setName("");
     setMessage("");
     setGuests(1);
@@ -105,9 +105,9 @@ export function RsvpWishesSection() {
 
       <div className="relative mx-auto max-w-3xl">
         <SectionTitle
-          eyebrow="Konfirmasi Rawuh"
-          title="Rawuh & Pangestu"
-          subtitle="Mangga paring pawartos rawuh panjenengan — mohon konfirmasi kehadiran dan sampaikan doa untuk kami."
+          eyebrow="Konfirmasi Kehadiran"
+          title="Kehadiran & Doa"
+          subtitle="Mohon konfirmasi kehadiran Anda dan sampaikan ucapan serta doa untuk kami."
         />
 
         <motion.form
@@ -230,7 +230,7 @@ export function RsvpWishesSection() {
 
         {/* Wishes */}
         <div className="mt-20">
-          <SectionTitle eyebrow="Ucapan & Doa" title="Kidung Pangestu" />
+          <SectionTitle eyebrow="Doa Restu" title="Ucapan & Doa" />
           <div className="mt-10 max-h-[28rem] space-y-4 overflow-y-auto pr-1 no-scrollbar">
             <AnimatePresence initial={false}>
               {wishes.map((wish) => (

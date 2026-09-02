@@ -165,7 +165,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
           aria-label="Mulai menelusuri undangan"
         >
           <span className="font-sans text-[0.62rem] tracking-royal uppercase text-gold/85 transition-colors duration-500 group-hover:text-gold">
-            Sugeng Rawuh
+            Selamat Datang
           </span>
           <motion.span
             aria-hidden="true"

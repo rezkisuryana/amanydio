@@ -18,7 +18,7 @@ export function GiftSection() {
   return (
     <section
       id="gift"
-      aria-label="Wedding gift"
+      aria-label="Hadiah pernikahan"
       className="relative isolate overflow-hidden bg-cream paper-grain vignette-paper px-5 py-24 sm:px-8 sm:py-28"
     >
       <BatikPattern variant="sidomukti" opacity={0.05} className="mask-fade-edges" />
@@ -32,7 +32,7 @@ export function GiftSection() {
 
       <div className="relative mx-auto max-w-3xl">
         <SectionTitle
-          eyebrow="Tanda Tresna"
+          eyebrow="Tanda Kasih"
           title={gift.title}
           subtitle={gift.note}
           divider="rail"

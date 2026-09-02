@@ -7,7 +7,7 @@ export function QuoteSection() {
 
   return (
     <section
-      aria-label="Ayem Tentrem"
+      aria-label="Ayat pernikahan"
       className="relative isolate overflow-hidden bg-cream paper-grain paper-fiber px-6 py-24 sm:py-32"
     >
       <BatikPattern variant="truntum" opacity={0.045} className="mask-fade-edges" />
