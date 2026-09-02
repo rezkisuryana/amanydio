@@ -3,14 +3,8 @@ import { Clock, MapPin } from "lucide-react";
 
 import { weddingConfig } from "@/config/weddingConfig";
 import { silk, viewportOnce } from "@/lib/motion-variants";
-import {
-  BatikPattern,
-  GoldDust,
-  GoldOrnament,
-  JogloLineArt,
-} from "../JavaneseOrnaments";
-import { ParticleBackground } from "../ParticleBackground";
-import { OrnateButton, ParallaxElement } from "../primitives";
+import { BatikPattern, GoldOrnament } from "../JavaneseOrnaments";
+import { OrnateButton } from "../primitives";
 
 export function EventSection() {
   const { events, venue } = weddingConfig;
@@ -24,20 +18,9 @@ export function EventSection() {
       <BatikPattern
         variant="sidomukti"
         tone="gold"
-        opacity={0.07}
+        opacity={0.05}
         className="mask-fade-edges"
       />
-
-      {/* the pendopo you are stepping into */}
-      <ParallaxElement
-        speed={0.16}
-        className="pointer-events-none absolute inset-x-0 bottom-0 mx-auto h-[52vh] w-[min(140vw,1280px)] opacity-[0.2] mask-fade-bottom"
-      >
-        <JogloLineArt />
-      </ParallaxElement>
-
-      <GoldDust opacity={0.16} />
-      <ParticleBackground count={12} />
 
       <div className="relative mx-auto max-w-5xl">
         <motion.p

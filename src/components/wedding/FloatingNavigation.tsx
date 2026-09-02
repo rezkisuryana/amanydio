@@ -1,15 +1,14 @@
 import { motion } from "motion/react";
-import { CalendarHeart, Gift, Home, Images, Users } from "lucide-react";
+import { CalendarHeart, Gift, Home, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
-  { id: "home", label: "Home", Icon: Home },
-  { id: "couple", label: "Couple", Icon: Users },
-  { id: "event", label: "Event", Icon: CalendarHeart },
-  { id: "gallery", label: "Gallery", Icon: Images },
-  { id: "gift", label: "Gift", Icon: Gift },
+  { id: "home", label: "Utama", Icon: Home },
+  { id: "couple", label: "Mempelai", Icon: Users },
+  { id: "event", label: "Acara", Icon: CalendarHeart },
+  { id: "gift", label: "Hadiah", Icon: Gift },
 ] as const;
 
 export function FloatingNavigation() {
