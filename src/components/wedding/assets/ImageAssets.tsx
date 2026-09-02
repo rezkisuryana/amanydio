@@ -54,12 +54,8 @@ function Deco({
 /* Z-1 · Batik                                                         */
 /* ------------------------------------------------------------------ */
 
-const BATIK_TILE: Record<BatikVariant, number> = {
-  kawung: 340,
-  parang: 300,
-  truntum: 260,
-  sidomukti: 300,
-};
+
+
 
 /**
  * Tiled batik layer. `tone: "sogan"` uses the woven original (light surfaces),
