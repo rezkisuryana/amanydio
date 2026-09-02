@@ -1,6 +1,6 @@
 import heroCouple from "@/assets/hero-couple.jpg";
 import brideAsset from "@/assets/bride-dio.jpg.asset.json";
-import groomPhoto from "@/assets/groom.jpg";
+import groomAsset from "@/assets/groom-amany.jpg.asset.json";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -16,7 +16,7 @@ export const weddingConfig = {
       order: "Putra dari",
       parents: ["Bapak Budi", "Ibu Ani"],
       instagram: "aditya",
-      photo: groomPhoto,
+      photo: groomAsset.url,
     },
     bride: {
       name: "Sarah Putri",
