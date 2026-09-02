@@ -16,7 +16,7 @@ export const weddingConfig = {
       order: "Putra dari",
       parents: ["Bapak Budi", "Ibu Ani"],
       instagram: "aditya",
-      photo: groomPhoto,
+      photo: groomAsset.url,
     },
     bride: {
       name: "Sarah Putri",
