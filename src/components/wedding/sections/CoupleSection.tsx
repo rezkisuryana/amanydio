@@ -51,7 +51,7 @@ export function CoupleSection() {
         />
 
         <div className="mt-20 grid items-start gap-16 sm:mt-24 md:grid-cols-[1fr_auto_1fr] md:gap-8">
-          <PersonCard person={couple.bride} label="The Bride" from="left" />
+          <PersonCard person={couple.bride} label="Mempelai Wanita" from="left" />
 
           <div className="relative flex items-center justify-center md:h-full md:pt-40">
             <span className="font-script text-6xl text-gold sm:text-7xl">&amp;</span>
@@ -59,7 +59,7 @@ export function CoupleSection() {
 
           <PersonCard
             person={couple.groom}
-            label="The Groom"
+            label="Mempelai Pria"
             from="right"
             className="md:mt-28"
           />

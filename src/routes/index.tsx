@@ -18,16 +18,14 @@ import { CountdownSection } from "@/components/wedding/sections/CountdownSection
 import { EventSection } from "@/components/wedding/sections/EventSection";
 import { VenueSection } from "@/components/wedding/sections/VenueSection";
 import { BatikReveal } from "@/components/wedding/sections/BatikReveal";
-import { GallerySection } from "@/components/wedding/sections/GallerySection";
-import { LoveStorySection } from "@/components/wedding/sections/LoveStorySection";
 import { GiftSection } from "@/components/wedding/sections/GiftSection";
 import { RsvpWishesSection } from "@/components/wedding/sections/RsvpWishesSection";
 import { PrayerSection } from "@/components/wedding/sections/PrayerSection";
 import { ClosingSection } from "@/components/wedding/sections/ClosingSection";
 
-const TITLE = "The Wedding of Aditya & Sarah";
+const TITLE = "Undangan Pernikahan Amany & Dio";
 const DESCRIPTION =
-  "Undangan Pernikahan Aditya & Sarah — 20 Desember 2026, Gedung Example, Jakarta.";
+  "Undangan pernikahan Amany & Dio — 20 Desember 2026, Gedung Example, Jakarta Selatan.";
 
 export const Route = createFileRoute("/")({
   validateSearch: z.object({ to: z.string().optional() }),
@@ -105,10 +103,6 @@ function Invitation() {
         <SectionSeam variant="rail" from="dark" to="paper" />
         <VenueSection />
         <BatikReveal variant="parang" tone="dark" />
-
-        {/* editorial */}
-        <GallerySection />
-        <LoveStorySection />
 
         <SectionSeam variant="ornament" from="paper" to="cream" />
         <GiftSection />

@@ -103,7 +103,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
           transition={silk(1, 0.35)}
           className="font-sans text-[0.7rem] tracking-royal uppercase text-gold-soft sm:text-[0.78rem]"
         >
-          The Wedding Of
+          Undangan Pernikahan
         </motion.p>
 
         {/* Layer 2 — couple names, visually bound as one mark */}
