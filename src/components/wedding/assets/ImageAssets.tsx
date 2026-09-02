@@ -80,7 +80,7 @@ export function BatikPattern({
 }) {
   const dark = tone !== "sogan";
   const url = dark ? A.batikGold[variant] : A.batik[variant];
-  const size = BATIK_TILE[variant] * scale;
+  void scale;
 
   return (
     <div
@@ -89,11 +89,13 @@ export function BatikPattern({
       style={{
         opacity,
         backgroundImage: `url(${url})`,
-        backgroundRepeat: "repeat",
-        backgroundSize: `${size}px ${size}px`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
         mixBlendMode: dark ? "normal" : "multiply",
       }}
     />
+
   );
 }
 
