@@ -52,7 +52,7 @@ export function CountdownSection() {
 
       <div className="relative mx-auto max-w-3xl">
         <SectionTitle
-          eyebrow="Ngenteni Dinten"
+          eyebrow="Menanti Hari"
           title="Menuju Hari Bahagia"
           tone="light"
           subtitle="Merupakan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara berkenan hadir dan memberikan doa restu."

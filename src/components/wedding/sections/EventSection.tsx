@@ -30,7 +30,7 @@ export function EventSection() {
           transition={silk(1)}
           className="text-center font-sans text-[0.55rem] tracking-royal uppercase text-gold/75"
         >
-          Pawai &amp; Pesta
+          Rangkaian Acara
         </motion.p>
 
         {/* One large typographic date — the drama of the section */}

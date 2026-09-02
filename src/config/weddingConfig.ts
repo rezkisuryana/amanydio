@@ -38,7 +38,7 @@ export const weddingConfig = {
   },
 
   quote: {
-    title: "Ayem Tentrem",
+    title: "Tenteram",
     text: "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya.",
     source: "QS. Ar-Rum : 21",
   },
@@ -103,13 +103,13 @@ export const weddingConfig = {
     {
       year: "2026",
       title: "Menuju Pernikahan",
-      text: "Dengan memohon ridho Allah, kami melangkah ke babak baru. Sugeng rawuh, dan mohon doa restunya.",
+      text: "Dengan memohon ridho Allah, kami melangkah ke babak baru. Kami mohon doa dan restu dari semua.",
       photo: gallery3,
     },
   ],
 
   gift: {
-    title: "Atur Pangestu",
+    title: "Tanda Kasih",
     note: "Doa restu Anda adalah hadiah terindah bagi kami. Namun apabila memberi adalah tanda kasih, kami menerimanya dengan penuh terima kasih.",
     bankAccounts: [
       { bank: "BCA", number: "1234567890", holder: "Aditya Pratama" },
@@ -120,7 +120,7 @@ export const weddingConfig = {
   },
 
   prayer: {
-    title: "Sawarga",
+    title: "Doa Untuk Pengantin",
     arabic: "بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
     transliteration:
       "Barakallahu laka wabaraka 'alaika wa jama'a bainakumaa fii khoir.",
@@ -129,9 +129,9 @@ export const weddingConfig = {
   },
 
   closing: {
-    title: "Matur Nuwun",
+    title: "Terima Kasih",
     text: "Terima kasih atas doa dan restu yang diberikan untuk kami.",
-    javanese: "Sampun rawuh ing dinten kabagyanipun kami.",
+    javanese: "Kehadiran Anda melengkapi kebahagiaan kami.",
     indonesian:
       "Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara berkenan hadir.",
   },
