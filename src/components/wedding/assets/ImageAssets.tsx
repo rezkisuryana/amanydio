@@ -54,12 +54,8 @@ function Deco({
 /* Z-1 · Batik                                                         */
 /* ------------------------------------------------------------------ */
 
-const BATIK_TILE: Record<BatikVariant, number> = {
-  kawung: 340,
-  parang: 300,
-  truntum: 260,
-  sidomukti: 300,
-};
+
+
 
 /**
  * Tiled batik layer. `tone: "sogan"` uses the woven original (light surfaces),
@@ -80,7 +76,7 @@ export function BatikPattern({
 }) {
   const dark = tone !== "sogan";
   const url = dark ? A.batikGold[variant] : A.batik[variant];
-  const size = BATIK_TILE[variant] * scale;
+  void scale;
 
   return (
     <div
@@ -89,11 +85,13 @@ export function BatikPattern({
       style={{
         opacity,
         backgroundImage: `url(${url})`,
-        backgroundRepeat: "repeat",
-        backgroundSize: `${size}px ${size}px`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
         mixBlendMode: dark ? "normal" : "multiply",
       }}
     />
+
   );
 }
 
