@@ -26,21 +26,40 @@ import { ClosingSection } from "@/components/wedding/sections/ClosingSection";
 const TITLE = "Undangan Pernikahan Amany & Dio";
 const DESCRIPTION =
   "Undangan pernikahan Amany & Dio — 20 Desember 2026, Gedung Example, Jakarta Selatan.";
+const SITE_URL = "https://amanydio.lovable.app";
 
 export const Route = createFileRoute("/")({
   validateSearch: z.object({ to: z.string().optional() }),
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+  loaderDeps: ({ search }) => ({ to: search.to }),
+  loader: ({ deps }) => ({
+    guestName: deps.to && deps.to.trim() ? deps.to.trim() : "",
   }),
+  head: ({ loaderData }) => {
+    const guest = loaderData?.guestName ?? "";
+    const title = guest ? `${guest}, Anda Kami Undang — ${TITLE}` : TITLE;
+    const description = guest
+      ? `Kepada ${guest} — dengan hormat kami mengundang Anda ke pernikahan Amany & Dio, 20 Desember 2026, Gedung Example, Jakarta Selatan.`
+      : DESCRIPTION;
+    const url = guest
+      ? `${SITE_URL}/?to=${encodeURIComponent(guest)}`
+      : `${SITE_URL}/`;
+
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: url },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
+      links: [{ rel: "canonical", href: url }],
+    };
+  },
   component: Invitation,
 });
+
 
 function Invitation() {
   const { to } = Route.useSearch();
