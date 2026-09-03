@@ -41,7 +41,7 @@ export function EventSection() {
           transition={silk(1.6, 0.1)}
           className="mt-10 text-center"
         >
-          <p className="font-display text-date-mono text-gold-gradient">20</p>
+          <p className="font-display text-date-mono text-gold-gradient">04</p>
           <p className="mt-2 font-serif text-[clamp(1rem,3.4vw,1.9rem)] tracking-royal uppercase text-cream/85">
             Desember
           </p>
