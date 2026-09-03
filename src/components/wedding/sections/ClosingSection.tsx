@@ -80,6 +80,7 @@ export function ClosingSection() {
             src={photos.closing}
             alt={`${couple.groom.nickname} dan ${couple.bride.nickname}`}
             variant="round"
+            imgClassName="object-cover object-center"
             width={1200}
             height={1200}
           />
