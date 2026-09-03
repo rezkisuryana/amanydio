@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "motion/react";
-import { Check, Send } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -65,6 +65,12 @@ export function RsvpWishesSection() {
   const [errors, setErrors] = useState<{ name?: string; message?: string }>({});
   const [shake, setShake] = useState(0);
   const [success, setSuccess] = useState(false);
+  const [page, setPage] = useState(1);
+
+  const perPage = 3;
+  const totalPages = Math.max(1, Math.ceil(wishes.length / perPage));
+  const currentPage = Math.min(page, totalPages);
+  const pagedWishes = wishes.slice((currentPage - 1) * perPage, currentPage * perPage);
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,6 +93,7 @@ export function RsvpWishesSection() {
       },
       ...prev,
     ]);
+    setPage(1);
     setSuccess(true);
     toast.success("Terima kasih, konfirmasi Anda telah kami terima.");
     setName("");
@@ -231,9 +238,9 @@ export function RsvpWishesSection() {
         {/* Wishes */}
         <div className="mt-20">
           <SectionTitle eyebrow="Doa Restu" title="Ucapan & Doa" />
-          <div className="mt-10 max-h-[28rem] space-y-4 overflow-y-auto pr-1 no-scrollbar">
+          <div className="mt-10 space-y-4">
             <AnimatePresence initial={false}>
-              {wishes.map((wish) => (
+              {pagedWishes.map((wish) => (
                 <motion.article
                   key={wish.id}
                   layout
@@ -260,6 +267,56 @@ export function RsvpWishesSection() {
               ))}
             </AnimatePresence>
           </div>
+          <nav
+            aria-label="Navigasi halaman ucapan"
+            className="mt-8 flex items-center justify-center gap-3"
+          >
+            <button
+              type="button"
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              aria-label="Halaman sebelumnya"
+              className="flex size-9 items-center justify-center border border-gold/40 text-sogan transition-colors hover:border-gold disabled:opacity-35"
+            >
+              <ChevronLeft className="size-4" strokeWidth={1.4} />
+            </button>
+
+            <ul className="flex items-center gap-2">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+                <li key={n}>
+                  <button
+                    type="button"
+                    onClick={() => setPage(n)}
+                    aria-current={n === currentPage ? "page" : undefined}
+                    aria-label={`Halaman ${n}`}
+                    className={cn(
+                      "size-9 border font-sans text-[0.62rem] transition-all duration-400",
+                      n === currentPage
+                        ? "border-gold bg-gold/12 text-java-brown"
+                        : "border-gold/25 text-muted-clay hover:border-gold/60",
+                    )}
+                  >
+                    {n}
+                  </button>
+                </li>
+              ))}
+            </ul>
+
+            <button
+              type="button"
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              aria-label="Halaman berikutnya"
+              className="flex size-9 items-center justify-center border border-gold/40 text-sogan transition-colors hover:border-gold disabled:opacity-35"
+            >
+              <ChevronRight className="size-4" strokeWidth={1.4} />
+            </button>
+          </nav>
+
+          <p className="mt-4 text-center font-sans text-[0.55rem] tracking-royal uppercase text-sogan/60">
+            Halaman {currentPage} dari {totalPages} · {wishes.length} ucapan
+          </p>
+
           <OrnamentalDivider className="mt-10" />
         </div>
       </div>
