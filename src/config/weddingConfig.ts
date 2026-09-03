@@ -6,7 +6,7 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
-import closingCouple from "@/assets/closing-couple.jpg";
+import closingAsset from "@/assets/closing-couple.jpg.asset.json";
 
 export const weddingConfig = {
   couple: {
@@ -34,7 +34,7 @@ export const weddingConfig = {
 
   photos: {
     hero: heroCouple,
-    closing: closingCouple,
+    closing: closingAsset.url,
   },
 
   quote: {
