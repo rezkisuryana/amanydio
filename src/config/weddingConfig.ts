@@ -67,9 +67,10 @@ export const weddingConfig = {
   venue: {
     name: "Lokasi & Maps",
     address: "Aula Rektorat Universitas Pamulang\n(Jl. Surya Kencana No.1 Kel. Pamulang Barat Kota Tangerang Selatan)",
-    googleMapsUrl: "https://maps.google.com/?q=Jakarta+Selatan",
+    googleMapsUrl:
+      "https://maps.google.com/?q=Aula+Rektorat+Universitas+Pamulang,+Jl.+Surya+Kencana+No.1,+Pamulang+Barat,+Tangerang+Selatan",
     googleMapsEmbed:
-      "https://www.google.com/maps?q=Jakarta%20Selatan&output=embed",
+      "https://www.google.com/maps?q=Aula%20Rektorat%20Universitas%20Pamulang%2C%20Jl.%20Surya%20Kencana%20No.1%2C%20Pamulang%20Barat%2C%20Tangerang%20Selatan&output=embed",
   },
 
   gallery: [
