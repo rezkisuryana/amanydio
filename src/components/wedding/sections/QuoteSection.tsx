@@ -26,7 +26,7 @@ export function QuoteSection() {
       >
         <StaggerItem>
           <p className="font-sans text-[0.55rem] tracking-royal uppercase text-sogan/70">
-            Ayem Tentrem
+            Tenteram
           </p>
         </StaggerItem>
         <StaggerItem variant="reveal">
