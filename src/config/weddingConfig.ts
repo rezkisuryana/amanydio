@@ -28,7 +28,7 @@ export const weddingConfig = {
     },
   },
 
-  weddingDate: "2026-12-20T09:00:00+07:00",
+  weddingDate: "2026-10-04T09:00:00+07:00",
   dateLabel: "04 . 10 . 2026",
   dateLong: "04 OKTOBER 2026",
 
