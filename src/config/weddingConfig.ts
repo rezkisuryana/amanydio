@@ -11,26 +11,26 @@ import closingCouple from "@/assets/closing-couple.jpg";
 export const weddingConfig = {
   couple: {
     groom: {
-      name: "Aditya Pratama",
+      name: "Dio Erlangga",
       nickname: "Amany",
-      order: "Putra dari",
-      parents: ["Bapak Budi", "Ibu Ani"],
-      instagram: "aditya",
+      order: "Putra Ketiga dari",
+      parents: ["(Alm) Bapak Heri Priyo Triyatno", "Ibu Maisaroh"],
+      instagram: "22ERLAN",
       photo: groomAsset.url,
     },
     bride: {
-      name: "Sarah Putri",
+      name: "Amany Fajryani",
       nickname: "Dio",
-      order: "Putri dari",
-      parents: ["Bapak Ahmad", "Ibu Siti"],
-      instagram: "sarah",
+      order: "Putri Ketiga dari",
+      parents: ["Bapak Dadang Suryana", "Ibu Juwarti"],
+      instagram: "RIANYY30",
       photo: brideAsset.url,
     },
   },
 
   weddingDate: "2026-12-20T09:00:00+07:00",
   dateLabel: "04 . 10 . 2026",
-  dateLong: "20 December 2026",
+  dateLong: "05 OKTOBER 2026",
 
   photos: {
     hero: heroCouple,
@@ -48,25 +48,25 @@ export const weddingConfig = {
       id: "akad",
       name: "Akad Nikah",
       subtitle: "Ijab Kabul",
-      date: "Minggu, 20 Desember 2026",
+      date: "Sabtu, 05 Oktober 2026",
       time: "09.00 WIB",
-      place: "Pendopo Agung, Gedung Example",
-      address: "Jl. Melati Raya No. 12, Jakarta Selatan",
+      place: "Aula Rektorat Universitas Pamulang",
+      address: "Jl. Surya Kencana No.1 Kel. Pamulang Barat Kota Tangerang Selatan",
     },
     {
       id: "resepsi",
       name: "Resepsi",
       subtitle: "Tasyakuran & Pahargyan",
-      date: "Minggu, 20 Desember 2026",
-      time: "11.00 – 15.00 WIB",
-      place: "Pendopo Agung, Gedung Example",
-      address: "Jl. Melati Raya No. 12, Jakarta Selatan",
+      date: "Sabtu, 05 Oktober 2026",
+      time: "11.00 – 13.00 WIB",
+      place: "Aula Rektorat Universitas Pamulang",
+      address: "Jl. Surya Kencana No.1 Kel. Pamulang Barat Kota Tangerang Selatan",
     },
   ],
 
   venue: {
-    name: "Gedung Example",
-    address: "Jl. Melati Raya No. 12, Jakarta Selatan, DKI Jakarta",
+    name: "Lokasi & Maps",
+    address: "Aula Rektorat Universitas Pamulang\n(Jl. Surya Kencana No.1 Kel. Pamulang Barat Kota Tangerang Selatan)",
     googleMapsUrl: "https://maps.google.com/?q=Jakarta+Selatan",
     googleMapsEmbed:
       "https://www.google.com/maps?q=Jakarta%20Selatan&output=embed",
@@ -112,11 +112,11 @@ export const weddingConfig = {
     title: "Tanda Kasih",
     note: "Doa restu Anda adalah hadiah terindah bagi kami. Namun apabila memberi adalah tanda kasih, kami menerimanya dengan penuh terima kasih.",
     bankAccounts: [
-      { bank: "BCA", number: "1234567890", holder: "Aditya Pratama" },
-      { bank: "Mandiri", number: "0987654321", holder: "Sarah Putri" },
+      { bank: "BCA", number: "6240951370", holder: "DIO ERLANGGA" },
+      { bank: "Mandiri", number: "1640006562567", holder: "AMANY FAJRYANI" },
     ],
     giftAddress:
-      "Jl. Kenanga No. 8, Kebayoran, Jakarta Selatan (a/n Aditya Pratama)",
+      "Jl. Ketapang 3 No.17 RT04 RW06 Pamulang Barat, Tangerang Selatan, Banten",
   },
 
   prayer: {
