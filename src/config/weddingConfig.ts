@@ -30,7 +30,7 @@ export const weddingConfig = {
 
   weddingDate: "2026-12-20T09:00:00+07:00",
   dateLabel: "04 . 10 . 2026",
-  dateLong: "05 OKTOBER 2026",
+  dateLong: "04 OKTOBER 2026",
 
   photos: {
     hero: heroCouple,
@@ -48,7 +48,7 @@ export const weddingConfig = {
       id: "akad",
       name: "Akad Nikah",
       subtitle: "Ijab Kabul",
-      date: "Sabtu, 05 Oktober 2026",
+      date: "Sabtu, 04 Oktober 2026",
       time: "09.00 WIB",
       place: "Aula Rektorat Universitas Pamulang",
       address: "Jl. Surya Kencana No.1 Kel. Pamulang Barat Kota Tangerang Selatan",
@@ -57,7 +57,7 @@ export const weddingConfig = {
       id: "resepsi",
       name: "Resepsi",
       subtitle: "Tasyakuran & Pahargyan",
-      date: "Sabtu, 05 Oktober 2026",
+      date: "Sabtu, 04 Oktober 2026",
       time: "11.00 – 13.00 WIB",
       place: "Aula Rektorat Universitas Pamulang",
       address: "Jl. Surya Kencana No.1 Kel. Pamulang Barat Kota Tangerang Selatan",
