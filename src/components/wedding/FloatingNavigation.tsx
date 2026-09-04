@@ -67,7 +67,7 @@ export function FloatingNavigation() {
                   />
                 ) : null}
                 <Icon className="relative size-4" strokeWidth={1.4} />
-                <span className="relative mt-0.5 text-eyebrow tracking-widest uppercase">
+                <span className="relative mt-0.5 text-[0.5rem] leading-none tracking-[0.12em] uppercase">
                   {label}
                 </span>
               </button>
