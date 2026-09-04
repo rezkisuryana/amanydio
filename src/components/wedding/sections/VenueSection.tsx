@@ -24,13 +24,13 @@ export function VenueSection() {
             viewport={viewportOnce}
             transition={silk(1.1)}
           >
-            <p className="font-sans text-[0.55rem] tracking-royal uppercase text-sogan/70">
+            <p className="font-sans text-eyebrow tracking-royal uppercase text-sogan/85">
               Papan Panggenan
             </p>
             <h2 className="mt-5 font-display text-[clamp(2rem,5vw,3.4rem)] leading-[1.06] text-java-brown">
               {venue.name}
             </h2>
-            <p className="mt-6 max-w-md font-sans text-[0.95rem] leading-[1.8] text-muted-clay">
+            <p className="mt-6 max-w-md font-sans text-body-sm leading-[1.8] text-muted-clay">
               {venue.address}
             </p>
           </motion.div>
@@ -60,16 +60,16 @@ export function VenueSection() {
           transition={silk(1.3, 0.1)}
           className="relative mt-14 w-full border border-gold/40 bg-ivory/90 p-3 shadow-ornate sm:p-4"
         >
-          <div aria-hidden="true" className="absolute -left-2 -top-2 size-9 text-gold/70">
+          <div aria-hidden="true" className="absolute -left-2 -top-2 size-9 text-gold/85">
             <CornerOrnament />
           </div>
-          <div aria-hidden="true" className="absolute -right-2 -top-2 size-9 text-gold/70">
+          <div aria-hidden="true" className="absolute -right-2 -top-2 size-9 text-gold/85">
             <CornerOrnament flipX />
           </div>
-          <div aria-hidden="true" className="absolute -left-2 -bottom-2 size-9 text-gold/70">
+          <div aria-hidden="true" className="absolute -left-2 -bottom-2 size-9 text-gold/85">
             <CornerOrnament flipY />
           </div>
-          <div aria-hidden="true" className="absolute -right-2 -bottom-2 size-9 text-gold/70">
+          <div aria-hidden="true" className="absolute -right-2 -bottom-2 size-9 text-gold/85">
             <CornerOrnament flipX flipY />
           </div>
 

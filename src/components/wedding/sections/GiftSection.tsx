@@ -50,10 +50,10 @@ export function GiftSection() {
             >
               <BatikPattern variant="parang" opacity={0.07} />
               <span aria-hidden="true" className="absolute inset-[6px] border border-gold/25" />
-              <div aria-hidden="true" className="absolute left-1 top-1 size-8 text-gold/70">
+              <div aria-hidden="true" className="absolute left-1 top-1 size-8 text-gold/85">
                 <CornerOrnament />
               </div>
-              <div aria-hidden="true" className="absolute right-1 bottom-1 size-8 text-gold/70">
+              <div aria-hidden="true" className="absolute right-1 bottom-1 size-8 text-gold/85">
                 <CornerOrnament flipX flipY />
               </div>
 
@@ -65,7 +65,7 @@ export function GiftSection() {
                 <p className="mt-5 font-display text-2xl tracking-wide-sm text-gold-gradient sm:text-3xl">
                   {acc.number}
                 </p>
-                <p className="mt-2 font-sans text-[0.62rem] tracking-wide-sm uppercase text-muted-clay">
+                <p className="mt-2 font-sans text-eyebrow tracking-wide-sm uppercase text-muted-clay">
                   a/n {acc.holder}
                 </p>
                 <CopyButton value={acc.number} className="mt-6" />
@@ -84,10 +84,10 @@ export function GiftSection() {
           <span className="inline-flex size-9 items-center justify-center rounded-full border border-gold/45 text-gold">
             <Home className="size-4" strokeWidth={1.3} />
           </span>
-          <p className="mt-4 font-sans text-[0.55rem] tracking-royal uppercase text-sogan">
+          <p className="mt-4 font-sans text-eyebrow tracking-royal uppercase text-sogan">
             Kirim Hadiah
           </p>
-          <p className="mx-auto mt-3 max-w-sm font-sans text-[0.76rem] leading-relaxed text-muted-clay">
+          <p className="mx-auto mt-3 max-w-sm font-sans text-body-sm leading-relaxed text-muted-clay">
             {gift.giftAddress}
           </p>
           <CopyButton value={gift.giftAddress} label="Salin Alamat" className="mt-5" />

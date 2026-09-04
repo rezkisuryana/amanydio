@@ -56,7 +56,7 @@ export function FloatingNavigation() {
                 aria-current={active === id ? "true" : undefined}
                 className={cn(
                   "relative flex size-11 flex-col items-center justify-center rounded-full transition-colors duration-400",
-                  active === id ? "text-gold" : "text-cream/55",
+                  active === id ? "text-gold" : "text-cream/75",
                 )}
               >
                 {active === id ? (
@@ -67,7 +67,7 @@ export function FloatingNavigation() {
                   />
                 ) : null}
                 <Icon className="relative size-4" strokeWidth={1.4} />
-                <span className="relative mt-0.5 text-[0.5rem] tracking-widest uppercase">
+                <span className="relative mt-0.5 text-eyebrow tracking-widest uppercase">
                   {label}
                 </span>
               </button>
@@ -95,7 +95,7 @@ export function FloatingNavigation() {
               >
                 <span
                   className={cn(
-                    "font-sans text-[0.55rem] tracking-royal uppercase transition-all duration-500",
+                    "font-sans text-eyebrow tracking-royal uppercase transition-all duration-500",
                     active === id
                       ? "text-gold opacity-100"
                       : "text-muted-clay opacity-0 group-hover:opacity-100",

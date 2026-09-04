@@ -40,7 +40,7 @@ export function CopyButton({
       aria-label={`${label} ${value}`}
       className={cn(
         "relative inline-flex items-center justify-center gap-2 border border-gold/55 px-5 py-2.5",
-        "font-sans text-[0.6rem] tracking-wide-sm uppercase text-sogan transition-colors duration-500",
+        "font-sans text-eyebrow tracking-wide-sm uppercase text-sogan transition-colors duration-500",
         "hover:border-gold hover:text-java-brown",
         className,
       )}

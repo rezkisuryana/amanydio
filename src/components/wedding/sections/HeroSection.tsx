@@ -101,7 +101,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={silk(1, 0.35)}
-          className="font-sans text-[0.7rem] tracking-royal uppercase text-gold-soft sm:text-[0.78rem]"
+          className="font-sans text-eyebrow tracking-royal uppercase text-gold-soft"
         >
           Undangan Pernikahan
         </motion.p>
@@ -133,7 +133,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
           <p className="mt-6 font-serif text-[1.05rem] tracking-wide-sm uppercase text-gold-soft sm:text-[1.35rem]">
             {dateLabel}
           </p>
-          <p className="mt-2 font-sans text-[0.62rem] tracking-royal uppercase text-cream/70">
+          <p className="mt-2 font-sans text-eyebrow tracking-royal uppercase text-cream/75">
             {dateLong}
           </p>
         </motion.div>
@@ -146,7 +146,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
             transition={silk(1.1, 1.45)}
             className="mt-14"
           >
-            <p className="font-sans text-[0.62rem] tracking-royal uppercase text-gold/85">
+            <p className="font-sans text-eyebrow tracking-royal uppercase text-gold/85">
               Kepada
             </p>
             <p className="mt-3 font-display text-[1.6rem] leading-tight text-cream/90 sm:text-[2.1rem]">
@@ -164,7 +164,7 @@ export function HeroSection({ guestName }: { guestName?: string }) {
           className="group mt-16 inline-flex flex-col items-center gap-4"
           aria-label="Mulai menelusuri undangan"
         >
-          <span className="font-sans text-[0.62rem] tracking-royal uppercase text-gold/85 transition-colors duration-500 group-hover:text-gold">
+          <span className="font-sans text-eyebrow tracking-royal uppercase text-gold/85 transition-colors duration-500 group-hover:text-gold">
             Selamat Datang
           </span>
           <motion.span

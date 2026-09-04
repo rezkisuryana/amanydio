@@ -166,8 +166,8 @@ export function SectionTitle({
         <StaggerItem>
           <p
             className={cn(
-              "font-sans text-[0.6rem] tracking-royal uppercase sm:text-[0.68rem]",
-              light ? "text-gold/80" : "text-sogan/80",
+              "font-sans text-eyebrow tracking-royal uppercase",
+              light ? "text-gold/85" : "text-sogan/85",
             )}
           >
             {eyebrow}
@@ -196,7 +196,7 @@ export function SectionTitle({
           <p
             className={cn(
               "mx-auto mt-6 max-w-[34rem] font-sans text-[clamp(0.9rem,1.6vw,1.0625rem)] leading-[1.75]",
-              light ? "text-cream/70" : "text-muted-clay",
+              light ? "text-cream/75" : "text-muted-clay",
             )}
           >
             {subtitle}
@@ -233,7 +233,7 @@ export function OrnateButton({
 }) {
   const base = cn(
     "group relative inline-flex items-center justify-center gap-2 overflow-hidden px-7 py-3.5",
-    "font-sans text-[0.62rem] tracking-royal uppercase transition-all duration-500",
+    "font-sans text-eyebrow tracking-royal uppercase transition-all duration-500",
     "disabled:pointer-events-none disabled:opacity-60",
     tone === "solid"
       ? "bg-java-brown text-cream hover:bg-sogan"
@@ -319,7 +319,7 @@ export function OrnateFrame({
     <div
       className={cn(
         "relative",
-        tone === "gold" ? "text-gold" : "text-cream/70",
+        tone === "gold" ? "text-gold" : "text-cream/75",
         className,
       )}
     >
