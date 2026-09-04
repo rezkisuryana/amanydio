@@ -23,7 +23,7 @@ export function PrayerSection() {
 
       <StaggerGroup className="relative mx-auto max-w-2xl text-center" stagger={0.2}>
         <StaggerItem>
-          <p className="font-sans text-eyebrow tracking-royal uppercase text-gold">
+          <p className="font-sans text-[0.58rem] tracking-royal uppercase text-gold">
             {prayer.title}
           </p>
         </StaggerItem>
@@ -45,7 +45,7 @@ export function PrayerSection() {
           </p>
         </StaggerItem>
         <StaggerItem>
-          <p className="mx-auto mt-6 max-w-md font-sans text-body-sm leading-relaxed text-cream/75">
+          <p className="mx-auto mt-6 max-w-md font-sans text-[0.74rem] leading-relaxed text-cream/55">
             {prayer.meaning}
           </p>
         </StaggerItem>

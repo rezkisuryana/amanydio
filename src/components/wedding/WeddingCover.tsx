@@ -97,7 +97,7 @@ export function WeddingCover({
       {/* Floral corners (sulur + melati) */}
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute left-0 top-0 size-28 text-gold/85 sm:size-40"
+        className="pointer-events-none absolute left-0 top-0 size-28 text-gold/45 sm:size-40"
         initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: opening ? 0 : 1, scale: 1 }}
         transition={silk(1.4, opening ? 0 : 0.7)}
@@ -106,7 +106,7 @@ export function WeddingCover({
       </motion.div>
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 bottom-0 size-28 text-gold/85 sm:size-40"
+        className="pointer-events-none absolute right-0 bottom-0 size-28 text-gold/45 sm:size-40"
         initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: opening ? 0 : 1, scale: 1 }}
         transition={silk(1.4, opening ? 0 : 0.85)}
@@ -150,7 +150,7 @@ export function WeddingCover({
       >
         <div className="contents">
             <motion.p
-              className="font-sans text-eyebrow tracking-royal uppercase text-gold/85"
+              className="font-sans text-[0.58rem] tracking-royal uppercase text-gold/85 sm:text-[0.66rem]"
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={silk(1.1, 1.9)}
@@ -189,7 +189,7 @@ export function WeddingCover({
               animate={{ opacity: 1, y: 0 }}
               transition={silk(1.1, 3)}
             >
-              <p className="font-sans text-eyebrow tracking-royal uppercase text-cream/75">
+              <p className="font-sans text-[0.55rem] tracking-royal uppercase text-cream/55">
                 Kepada Yth.
               </p>
               <p className="mt-2 font-display text-xl text-cream sm:text-2xl">{guestName}</p>

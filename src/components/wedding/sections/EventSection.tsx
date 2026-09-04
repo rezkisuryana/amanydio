@@ -28,7 +28,7 @@ export function EventSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
           transition={silk(1)}
-          className="text-center font-sans text-eyebrow tracking-royal uppercase text-gold/85"
+          className="text-center font-sans text-[0.55rem] tracking-royal uppercase text-gold/75"
         >
           Rangkaian Acara
         </motion.p>
@@ -45,7 +45,7 @@ export function EventSection() {
           <p className="mt-2 font-serif text-[clamp(1rem,3.4vw,1.9rem)] tracking-royal uppercase text-cream/85">
             OKTOBER
           </p>
-          <p className="mt-4 font-sans text-eyebrow tracking-royal uppercase text-gold/85">
+          <p className="mt-4 font-sans text-[0.7rem] tracking-royal uppercase text-gold/70 sm:text-[0.85rem]">
             2026
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ export function EventSection() {
               transition={silk(1.2, i * 0.15)}
               className="relative border-t border-gold/30 pt-9 text-center md:text-left"
             >
-              <p className="font-sans text-eyebrow tracking-royal uppercase text-gold/85">
+              <p className="font-sans text-[0.5rem] tracking-royal uppercase text-gold/70">
                 {event.subtitle}
               </p>
               <h3 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.1rem)] leading-tight text-cream">
@@ -110,7 +110,7 @@ function DetailRow({
         <span className="block font-serif text-[clamp(1.05rem,2vw,1.4rem)] leading-snug text-gold-soft">
           {label}
         </span>
-        <span className="mt-1 block font-sans text-body-sm leading-relaxed text-cream/75">
+        <span className="mt-1 block font-sans text-[0.85rem] leading-relaxed text-cream/60">
           {value}
         </span>
       </span>

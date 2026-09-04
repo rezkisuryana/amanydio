@@ -63,7 +63,7 @@
   --gold-soft: oklch(0.86 0.055 85); /* lighter gold */
   --cream: oklch(0.947 0.019 79.3); /* #F4EBDD */
   --ivory: oklch(0.976 0.014 83.5); /* #FFF9EF */
-  --muted-clay: oklch(0.472 0.038 58); /* darkened for AA contrast */
+  --muted-clay: oklch(0.575 0.036 62.4); /* #9B8065 */
 
   --background: var(--ivory);
   --foreground: var(--java-dark);
@@ -631,17 +631,4 @@
 
 @utility animate-breathe {
   animation: gunungan-breathe 11s var(--ease-silk) infinite;
-}
-
-/* ---------- Readability pass: fluid, consistent type scale ---------- */
-
-/* Small uppercase labels / eyebrows — never below 12px on mobile */
-@utility text-eyebrow {
-  font-size: clamp(0.72rem, 1.5vw, 0.8rem);
-  line-height: 1.5;
-}
-
-@utility text-body-sm {
-  font-size: clamp(0.9rem, 1.6vw, 1rem);
-  line-height: 1.75;
 }

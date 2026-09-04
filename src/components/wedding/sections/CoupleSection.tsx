@@ -113,18 +113,18 @@ function PersonCard({
       <div className="mt-10 text-center md:text-left">
         <div
           aria-hidden="true"
-          className="mx-auto h-8 w-12 text-gold/85 md:mx-0"
+          className="mx-auto h-8 w-12 text-gold/60 md:mx-0"
         >
           <SulurVine className="rotate-90" />
         </div>
 
-        <p className="mt-4 font-sans text-eyebrow tracking-royal uppercase text-gold">
+        <p className="mt-4 font-sans text-[0.55rem] tracking-royal uppercase text-gold">
           {label}
         </p>
         <h3 className="mt-4 font-display text-[clamp(2.1rem,4.4vw,3rem)] leading-[1.08] text-java-brown">
           {person.name}
         </h3>
-        <p className="mx-auto mt-5 max-w-xs font-sans text-body-sm leading-relaxed text-muted-clay md:mx-0">
+        <p className="mx-auto mt-5 max-w-xs font-sans text-[0.9rem] leading-relaxed text-muted-clay md:mx-0">
           {person.order}
           <br />
           <span className="text-java-brown/85">
@@ -137,7 +137,7 @@ function PersonCard({
           target="_blank"
           rel="noreferrer noopener"
           aria-label={`Instagram ${person.name}`}
-          className="mt-6 inline-flex items-center gap-2 border border-gold/45 px-4 py-2 font-sans text-eyebrow tracking-wide-sm uppercase text-sogan transition-all duration-500 hover:border-gold hover:text-java-brown"
+          className="mt-6 inline-flex items-center gap-2 border border-gold/45 px-4 py-2 font-sans text-[0.55rem] tracking-wide-sm uppercase text-sogan transition-all duration-500 hover:border-gold hover:text-java-brown"
         >
           <Instagram className="size-3.5" strokeWidth={1.4} />@{person.instagram}
         </a>

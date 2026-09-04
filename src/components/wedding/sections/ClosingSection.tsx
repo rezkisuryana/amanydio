@@ -49,7 +49,7 @@ export function ClosingSection() {
       {/* Floral entering from both sides */}
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-6 bottom-10 h-64 w-24 text-gold/85 sm:left-2 sm:h-80 sm:w-32"
+        className="pointer-events-none absolute -left-6 bottom-10 h-64 w-24 text-gold/40 sm:left-2 sm:h-80 sm:w-32"
         initial={{ x: -90, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -59,7 +59,7 @@ export function ClosingSection() {
       </motion.div>
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-6 bottom-10 h-64 w-24 text-gold/85 sm:right-2 sm:h-80 sm:w-32"
+        className="pointer-events-none absolute -right-6 bottom-10 h-64 w-24 text-gold/40 sm:right-2 sm:h-80 sm:w-32"
         initial={{ x: 90, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -107,7 +107,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
           transition={silk(1.1, 0.35)}
-          className="mx-auto mt-8 max-w-md font-sans text-[clamp(0.9rem,1.6vw,1.0625rem)] leading-[1.75] text-cream/75"
+          className="mx-auto mt-8 max-w-md font-sans text-[clamp(0.9rem,1.6vw,1.0625rem)] leading-[1.75] text-cream/70"
         >
           {closing.text}
         </motion.p>
@@ -126,7 +126,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1 }}
           viewport={viewportOnce}
           transition={silk(1.2, 0.65)}
-          className="mx-auto mt-3 max-w-md font-sans text-eyebrow leading-relaxed text-cream/75"
+          className="mx-auto mt-3 max-w-md font-sans text-[0.7rem] leading-relaxed text-cream/50"
         >
           {closing.indonesian}
         </motion.p>
@@ -142,13 +142,13 @@ export function ClosingSection() {
           <p className="font-display text-2xl uppercase text-cream sm:text-4xl">
             {couple.groom.nickname} &amp; {couple.bride.nickname}
           </p>
-          <p className="mt-4 font-sans text-eyebrow tracking-royal uppercase text-gold/85">
+          <p className="mt-4 font-sans text-[0.55rem] tracking-royal uppercase text-gold/80">
             {dateLong}
           </p>
         </motion.div>
 
         <OrnamentalDivider className="mt-14" tone="cream" />
-        <p className="mt-6 font-sans text-eyebrow tracking-royal uppercase text-cream/75">
+        <p className="mt-6 font-sans text-[0.5rem] tracking-royal uppercase text-cream/35">
           Wassalamu&apos;alaikum Warahmatullahi Wabarakatuh
         </p>
       </div>

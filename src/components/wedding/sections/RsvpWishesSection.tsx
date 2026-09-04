@@ -129,10 +129,10 @@ export function RsvpWishesSection() {
           initial={false}
           className="relative mt-16 border border-gold/40 bg-ivory/95 px-5 py-10 shadow-ornate sm:px-10 sm:py-12"
         >
-          <div aria-hidden="true" className="absolute -left-2 -top-2 size-9 text-gold/85">
+          <div aria-hidden="true" className="absolute -left-2 -top-2 size-9 text-gold/70">
             <CornerOrnament />
           </div>
-          <div aria-hidden="true" className="absolute -right-2 -bottom-2 size-9 text-gold/85">
+          <div aria-hidden="true" className="absolute -right-2 -bottom-2 size-9 text-gold/70">
             <CornerOrnament flipX flipY />
           </div>
 
@@ -148,7 +148,7 @@ export function RsvpWishesSection() {
             </Field>
 
             <fieldset>
-              <legend className="font-sans text-eyebrow tracking-royal uppercase text-sogan">
+              <legend className="font-sans text-[0.55rem] tracking-royal uppercase text-sogan">
                 Konfirmasi Kehadiran
               </legend>
               <div className="mt-3 flex flex-wrap gap-2">
@@ -159,7 +159,7 @@ export function RsvpWishesSection() {
                     onClick={() => setAttendance(key)}
                     aria-pressed={attendance === key}
                     className={cn(
-                      "border px-4 py-2 font-sans text-eyebrow tracking-wide-sm uppercase transition-all duration-500",
+                      "border px-4 py-2 font-sans text-[0.55rem] tracking-wide-sm uppercase transition-all duration-500",
                       attendance === key
                         ? "border-gold bg-gold/12 text-java-brown"
                         : "border-gold/30 text-muted-clay hover:border-gold/60",
@@ -256,11 +256,11 @@ export function RsvpWishesSection() {
                     <h3 className="font-serif text-sm tracking-wide-sm text-java-brown">
                       {wish.name}
                     </h3>
-                    <span className="border border-gold/40 px-2.5 py-1 font-sans text-eyebrow tracking-wide-sm uppercase text-sogan">
+                    <span className="border border-gold/40 px-2.5 py-1 font-sans text-[0.48rem] tracking-wide-sm uppercase text-sogan">
                       {ATTENDANCE_LABEL[wish.attendance]} · {wish.guests} tamu
                     </span>
                   </div>
-                  <p className="relative mt-3 font-sans text-body-sm leading-relaxed text-muted-clay">
+                  <p className="relative mt-3 font-sans text-[0.76rem] leading-relaxed text-muted-clay">
                     {wish.message}
                   </p>
                 </motion.article>
@@ -290,7 +290,7 @@ export function RsvpWishesSection() {
                     aria-current={n === currentPage ? "page" : undefined}
                     aria-label={`Halaman ${n}`}
                     className={cn(
-                      "size-9 border font-sans text-eyebrow transition-all duration-400",
+                      "size-9 border font-sans text-[0.62rem] transition-all duration-400",
                       n === currentPage
                         ? "border-gold bg-gold/12 text-java-brown"
                         : "border-gold/25 text-muted-clay hover:border-gold/60",
@@ -313,7 +313,7 @@ export function RsvpWishesSection() {
             </button>
           </nav>
 
-          <p className="mt-4 text-center font-sans text-eyebrow tracking-royal uppercase text-sogan/85">
+          <p className="mt-4 text-center font-sans text-[0.55rem] tracking-royal uppercase text-sogan/60">
             Halaman {currentPage} dari {totalPages} · {wishes.length} ucapan
           </p>
 
@@ -335,7 +335,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="font-sans text-eyebrow tracking-royal uppercase text-sogan">
+      <span className="font-sans text-[0.55rem] tracking-royal uppercase text-sogan">
         {label}
       </span>
       <div className="mt-3">{children}</div>
@@ -345,7 +345,7 @@ function Field({
             initial={{ opacity: 0, y: -6 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="mt-2 block font-sans text-eyebrow text-destructive"
+            className="mt-2 block font-sans text-[0.62rem] text-destructive"
           >
             {error}
           </motion.span>
