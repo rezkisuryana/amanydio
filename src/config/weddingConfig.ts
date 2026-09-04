@@ -132,7 +132,7 @@ export const weddingConfig = {
   closing: {
     title: "Terima Kasih",
     text: "Terima kasih atas doa dan restu yang diberikan untuk kami.",
-    javanese: "Kehadiran Anda melengkapi kebahagiaan kami.",
+    javanese: "Jazakumullahu khoiron wa baarakallahu fiikum",
     indonesian:
       "Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara berkenan hadir.",
   },
