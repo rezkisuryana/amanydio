@@ -25,7 +25,7 @@ export function QuoteSection() {
         stagger={0.16}
       >
         <StaggerItem>
-          <p className="font-sans text-[0.55rem] tracking-royal uppercase text-sogan/70">
+          <p className="font-sans text-eyebrow tracking-royal uppercase text-sogan/85">
             Tenteram
           </p>
         </StaggerItem>
@@ -36,7 +36,7 @@ export function QuoteSection() {
             </p>
             <footer className="mt-9 flex items-center gap-5">
               <span aria-hidden="true" className="h-px w-14 bg-gold/60" />
-              <span className="font-sans text-[0.6rem] tracking-royal uppercase text-gold">
+              <span className="font-sans text-eyebrow tracking-royal uppercase text-gold">
                 {quote.source}
               </span>
             </footer>

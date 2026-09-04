@@ -107,13 +107,13 @@ export function Lightbox({
                 alt={current.alt}
                 className="max-h-[74vh] w-auto max-w-full object-contain"
               />
-              <figcaption className="mt-4 text-center font-sans text-[0.6rem] tracking-royal uppercase text-cream/60">
+              <figcaption className="mt-4 text-center font-sans text-eyebrow tracking-royal uppercase text-cream/75">
                 {current.alt}
               </figcaption>
             </motion.figure>
           </AnimatePresence>
 
-          <p className="absolute bottom-6 left-1/2 -translate-x-1/2 font-sans text-[0.65rem] tracking-royal text-gold">
+          <p className="absolute bottom-6 left-1/2 -translate-x-1/2 font-sans text-eyebrow tracking-royal text-gold">
             {String((index ?? 0) + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
           </p>
         </motion.div>

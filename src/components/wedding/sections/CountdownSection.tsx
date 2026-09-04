@@ -87,7 +87,7 @@ export function CountdownSection() {
                   </motion.span>
                 </AnimatePresence>
               </div>
-              <p className="relative mt-3 font-sans text-[0.5rem] tracking-royal uppercase text-cream/60">
+              <p className="relative mt-3 font-sans text-eyebrow tracking-royal uppercase text-cream/75">
                 {u.label}
               </p>
             </motion.div>
