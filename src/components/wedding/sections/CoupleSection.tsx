@@ -99,9 +99,9 @@ function PersonCard({
           src={person.photo}
           alt={`Foto ${person.name}`}
           variant="round"
-          width={1024}
-          height={1280}
-          imgClassName="transition-transform duration-[1.6s] ease-[var(--ease-silk)] group-hover:scale-[1.06]"
+          width={1000}
+          height={1000}
+          imgClassName="object-cover object-center transition-transform duration-[1.6s] ease-[var(--ease-silk)] group-hover:scale-[1.06]"
         >
           <span
             aria-hidden="true"
