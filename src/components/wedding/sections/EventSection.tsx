@@ -43,7 +43,7 @@ export function EventSection() {
         >
           <p className="font-display text-date-mono text-gold-gradient">04</p>
           <p className="mt-2 font-serif text-[clamp(1rem,3.4vw,1.9rem)] tracking-royal uppercase text-cream/85">
-            Desember
+            OKTOBER
           </p>
           <p className="mt-4 font-sans text-[0.7rem] tracking-royal uppercase text-gold/70 sm:text-[0.85rem]">
             2026
