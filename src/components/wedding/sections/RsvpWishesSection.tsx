@@ -29,32 +29,7 @@ const ATTENDANCE_LABEL: Record<Attendance, string> = {
   tidak: "Belum Bisa Hadir",
 };
 
-const INITIAL_WISHES: Wish[] = [
-  {
-    id: 1,
-    name: "Keluarga Wirasmara",
-    attendance: "hadir",
-    guests: 2,
-    message:
-      "Selamat berbahagia. Semoga selalu rukun, tenteram, dan bahagia sampai kakek-nenek.",
-  },
-  {
-    id: 2,
-    name: "Dwi & Ratna",
-    attendance: "hadir",
-    guests: 2,
-    message:
-      "Barakallahu lakuma. Selamat menempuh hidup baru, semoga menjadi keluarga yang sakinah mawaddah warahmah.",
-  },
-  {
-    id: 3,
-    name: "Bayu Kusuma",
-    attendance: "ragu",
-    guests: 1,
-    message:
-      "Turut berbahagia untuk kalian berdua. Semoga selalu diliputi kebaikan dan keberkahan.",
-  },
-];
+const INITIAL_WISHES: Wish[] = [];
 
 export function RsvpWishesSection() {
   const [wishes, setWishes] = useState<Wish[]>(INITIAL_WISHES);
@@ -239,33 +214,39 @@ export function RsvpWishesSection() {
         <div className="mt-20">
           <SectionTitle eyebrow="Doa Restu" title="Ucapan & Doa" />
           <div className="mt-10 space-y-4">
-            <AnimatePresence initial={false}>
-              {pagedWishes.map((wish) => (
-                <motion.article
-                  key={wish.id}
-                  layout
-                  initial={{ opacity: 0, y: 26, scale: 0.96 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.96 }}
-                  viewport={viewportOnce}
-                  transition={silk(0.7)}
-                  className="relative overflow-hidden border border-gold/30 bg-ivory/90 px-5 py-5 paper-grain"
-                >
-                  <BatikPattern variant="kawung" opacity={0.05} />
-                  <div className="relative flex flex-wrap items-center justify-between gap-2">
-                    <h3 className="font-serif text-sm tracking-wide-sm text-java-brown">
-                      {wish.name}
-                    </h3>
-                    <span className="border border-gold/40 px-2.5 py-1 font-sans text-[0.48rem] tracking-wide-sm uppercase text-sogan">
-                      {ATTENDANCE_LABEL[wish.attendance]} · {wish.guests} tamu
-                    </span>
-                  </div>
-                  <p className="relative mt-3 font-sans text-[0.76rem] leading-relaxed text-muted-clay">
-                    {wish.message}
-                  </p>
-                </motion.article>
-              ))}
-            </AnimatePresence>
+            {wishes.length === 0 ? (
+              <p className="border border-gold/25 bg-ivory/70 px-5 py-10 text-center font-sans text-[0.62rem] tracking-wide-sm uppercase text-sogan">
+                Belum ada ucapan. Jadilah yang pertama memberi doa restu.
+              </p>
+            ) : (
+              <AnimatePresence initial={false}>
+                {pagedWishes.map((wish) => (
+                  <motion.article
+                    key={wish.id}
+                    layout
+                    initial={{ opacity: 0, y: 26, scale: 0.96 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.96 }}
+                    viewport={viewportOnce}
+                    transition={silk(0.7)}
+                    className="relative overflow-hidden border border-gold/30 bg-ivory/90 px-5 py-5 paper-grain"
+                  >
+                    <BatikPattern variant="kawung" opacity={0.05} />
+                    <div className="relative flex flex-wrap items-center justify-between gap-2">
+                      <h3 className="font-serif text-sm tracking-wide-sm text-java-brown">
+                        {wish.name}
+                      </h3>
+                      <span className="border border-gold/40 px-2.5 py-1 font-sans text-[0.48rem] tracking-wide-sm uppercase text-sogan">
+                        {ATTENDANCE_LABEL[wish.attendance]} · {wish.guests} tamu
+                      </span>
+                    </div>
+                    <p className="relative mt-3 font-sans text-[0.76rem] leading-relaxed text-muted-clay">
+                      {wish.message}
+                    </p>
+                  </motion.article>
+                ))}
+              </AnimatePresence>
+            )}
           </div>
           <nav
             aria-label="Navigasi halaman ucapan"
