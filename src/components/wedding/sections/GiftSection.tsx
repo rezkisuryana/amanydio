@@ -62,7 +62,7 @@ export function GiftSection() {
                   {acc.bank}
                 </p>
                 <OrnamentalDivider className="mt-3 max-w-[9rem]" />
-                <p className="mt-5 font-display text-2xl tracking-wide-sm text-gold-gradient sm:text-3xl">
+                <p className="mt-5 font-display text-2xl font-bold tracking-wide-sm text-gold-gradient sm:text-3xl">
                   {acc.number}
                 </p>
                 <p className="mt-2 font-sans text-[0.62rem] tracking-wide-sm uppercase text-muted-clay">
