@@ -29,32 +29,7 @@ const ATTENDANCE_LABEL: Record<Attendance, string> = {
   tidak: "Belum Bisa Hadir",
 };
 
-const INITIAL_WISHES: Wish[] = [
-  {
-    id: 1,
-    name: "Keluarga Wirasmara",
-    attendance: "hadir",
-    guests: 2,
-    message:
-      "Selamat berbahagia. Semoga selalu rukun, tenteram, dan bahagia sampai kakek-nenek.",
-  },
-  {
-    id: 2,
-    name: "Dwi & Ratna",
-    attendance: "hadir",
-    guests: 2,
-    message:
-      "Barakallahu lakuma. Selamat menempuh hidup baru, semoga menjadi keluarga yang sakinah mawaddah warahmah.",
-  },
-  {
-    id: 3,
-    name: "Bayu Kusuma",
-    attendance: "ragu",
-    guests: 1,
-    message:
-      "Turut berbahagia untuk kalian berdua. Semoga selalu diliputi kebaikan dan keberkahan.",
-  },
-];
+const INITIAL_WISHES: Wish[] = [];
 
 export function RsvpWishesSection() {
   const [wishes, setWishes] = useState<Wish[]>(INITIAL_WISHES);
