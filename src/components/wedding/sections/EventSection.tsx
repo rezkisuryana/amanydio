@@ -62,7 +62,7 @@ export function EventSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewportOnce}
               transition={silk(1.2, i * 0.15)}
-              className="relative border-t border-gold/30 pt-9 text-center md:text-left"
+              className="relative border-t border-gold/30 pt-9 text-left"
             >
               <p className="font-sans text-[0.5rem] tracking-royal uppercase text-gold/70">
                 {event.subtitle}
