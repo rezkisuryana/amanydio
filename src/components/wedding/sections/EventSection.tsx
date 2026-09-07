@@ -76,7 +76,7 @@ export function EventSection() {
                 <DetailRow Icon={MapPin} label={event.place} value={event.address} />
               </ul>
 
-              <div className="mt-9 flex justify-center md:justify-start">
+              <div className="mt-9 flex justify-start">
                 <OrnateButton
                   href={venue.googleMapsUrl}
                   ariaLabel={`Lihat lokasi ${event.name}`}
@@ -102,7 +102,7 @@ function DetailRow({
   value: string;
 }) {
   return (
-    <li className="flex items-start justify-center gap-4 md:justify-start">
+    <li className="flex items-start justify-start gap-4">
       <span className="mt-1 flex size-8 shrink-0 items-center justify-center rounded-full border border-gold/40 text-gold">
         <Icon className="size-3.5" strokeWidth={1.2} />
       </span>
