@@ -632,3 +632,14 @@
 @utility animate-breathe {
   animation: gunungan-breathe 11s var(--ease-silk) infinite;
 }
+
+/* Hide the "Edit with Lovable" badge on published deployments */
+#lovable-badge,
+.lovable-badge,
+[data-lovable-badge],
+a[href*="lovable"][rel*="noopener"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
