@@ -248,55 +248,59 @@ export function RsvpWishesSection() {
               </AnimatePresence>
             )}
           </div>
-          <nav
-            aria-label="Navigasi halaman ucapan"
-            className="mt-8 flex items-center justify-center gap-3"
-          >
-            <button
-              type="button"
-              onClick={() => setPage((p) => Math.max(1, p - 1))}
-              disabled={currentPage === 1}
-              aria-label="Halaman sebelumnya"
-              className="flex size-9 items-center justify-center border border-gold/40 text-sogan transition-colors hover:border-gold disabled:opacity-35"
+          {wishes.length > 0 && (
+            <nav
+              aria-label="Navigasi halaman ucapan"
+              className="mt-8 flex items-center justify-center gap-3"
             >
-              <ChevronLeft className="size-4" strokeWidth={1.4} />
-            </button>
+              <button
+                type="button"
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                aria-label="Halaman sebelumnya"
+                className="flex size-9 items-center justify-center border border-gold/40 text-sogan transition-colors hover:border-gold disabled:opacity-35"
+              >
+                <ChevronLeft className="size-4" strokeWidth={1.4} />
+              </button>
 
-            <ul className="flex items-center gap-2">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
-                <li key={n}>
-                  <button
-                    type="button"
-                    onClick={() => setPage(n)}
-                    aria-current={n === currentPage ? "page" : undefined}
-                    aria-label={`Halaman ${n}`}
-                    className={cn(
-                      "size-9 border font-sans text-[0.62rem] transition-all duration-400",
-                      n === currentPage
-                        ? "border-gold bg-gold/12 text-java-brown"
-                        : "border-gold/25 text-muted-clay hover:border-gold/60",
-                    )}
-                  >
-                    {n}
-                  </button>
-                </li>
-              ))}
-            </ul>
+              <ul className="flex items-center gap-2">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+                  <li key={n}>
+                    <button
+                      type="button"
+                      onClick={() => setPage(n)}
+                      aria-current={n === currentPage ? "page" : undefined}
+                      aria-label={`Halaman ${n}`}
+                      className={cn(
+                        "size-9 border font-sans text-[0.62rem] transition-all duration-400",
+                        n === currentPage
+                          ? "border-gold bg-gold/12 text-java-brown"
+                          : "border-gold/25 text-muted-clay hover:border-gold/60",
+                      )}
+                    >
+                      {n}
+                    </button>
+                  </li>
+                ))}
+              </ul>
 
-            <button
-              type="button"
-              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-              disabled={currentPage === totalPages}
-              aria-label="Halaman berikutnya"
-              className="flex size-9 items-center justify-center border border-gold/40 text-sogan transition-colors hover:border-gold disabled:opacity-35"
-            >
-              <ChevronRight className="size-4" strokeWidth={1.4} />
-            </button>
-          </nav>
+              <button
+                type="button"
+                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+                aria-label="Halaman berikutnya"
+                className="flex size-9 items-center justify-center border border-gold/40 text-sogan transition-colors hover:border-gold disabled:opacity-35"
+              >
+                <ChevronRight className="size-4" strokeWidth={1.4} />
+              </button>
+            </nav>
+          )}
 
-          <p className="mt-4 text-center font-sans text-[0.55rem] tracking-royal uppercase text-sogan/60">
-            Halaman {currentPage} dari {totalPages} · {wishes.length} ucapan
-          </p>
+          {wishes.length > 0 && (
+            <p className="mt-4 text-center font-sans text-[0.55rem] tracking-royal uppercase text-sogan/60">
+              Halaman {currentPage} dari {totalPages} · {wishes.length} ucapan
+            </p>
+          )}
 
           <OrnamentalDivider className="mt-10" />
         </div>
