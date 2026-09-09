@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from "motion/react";
 import { Check, ChevronLeft, ChevronRight, Send } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
+import { supabase } from "@/integrations/supabase/client";
 import { silk, viewportOnce } from "@/lib/motion-variants";
 import { cn } from "@/lib/utils";
 import {
@@ -16,7 +17,7 @@ import { OrnateButton, SectionTitle } from "../primitives";
 type Attendance = "hadir" | "ragu" | "tidak";
 
 type Wish = {
-  id: number;
+  id: string;
   name: string;
   attendance: Attendance;
   guests: number;
@@ -29,10 +30,8 @@ const ATTENDANCE_LABEL: Record<Attendance, string> = {
   tidak: "Belum Bisa Hadir",
 };
 
-const INITIAL_WISHES: Wish[] = [];
-
 export function RsvpWishesSection() {
-  const [wishes, setWishes] = useState<Wish[]>(INITIAL_WISHES);
+  const [wishes, setWishes] = useState<Wish[]>([]);
   const [name, setName] = useState("");
   const [attendance, setAttendance] = useState<Attendance>("hadir");
   const [guests, setGuests] = useState(1);
@@ -41,11 +40,27 @@ export function RsvpWishesSection() {
   const [shake, setShake] = useState(0);
   const [success, setSuccess] = useState(false);
   const [page, setPage] = useState(1);
+  const [sending, setSending] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    void supabase
+      .from("rsvp_entries")
+      .select("id, name, attendance, guests, message")
+      .order("created_at", { ascending: false })
+      .then(({ data }) => {
+        if (active && data) setWishes(data as Wish[]);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const perPage = 3;
   const totalPages = Math.max(1, Math.ceil(wishes.length / perPage));
   const currentPage = Math.min(page, totalPages);
   const pagedWishes = wishes.slice((currentPage - 1) * perPage, currentPage * perPage);
+
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
