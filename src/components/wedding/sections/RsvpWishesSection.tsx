@@ -208,7 +208,7 @@ export function RsvpWishesSection() {
             </Field>
 
             <div className="flex justify-center pt-2">
-              <OrnateButton type="submit" tone="solid" ariaLabel="Kirim konfirmasi kehadiran">
+              <OrnateButton type="submit" tone="solid" disabled={sending} ariaLabel="Kirim konfirmasi kehadiran">
                 <AnimatePresence mode="wait" initial={false}>
                   {success ? (
                     <motion.span
