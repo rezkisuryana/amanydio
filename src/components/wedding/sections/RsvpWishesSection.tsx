@@ -62,27 +62,39 @@ export function RsvpWishesSection() {
   const pagedWishes = wishes.slice((currentPage - 1) * perPage, currentPage * perPage);
 
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     const next: { name?: string; message?: string } = {};
     if (name.trim().length < 2) next.name = "Mohon isi nama Anda.";
     if (message.trim().length < 4) next.message = "Mohon tuliskan ucapan atau doa.";
+    if (name.trim().length > 100) next.name = "Nama terlalu panjang.";
+    if (message.trim().length > 1000) next.message = "Ucapan terlalu panjang.";
     setErrors(next);
     if (Object.keys(next).length) {
       setShake((s) => s + 1);
       return;
     }
 
-    setWishes((prev) => [
-      {
-        id: Date.now(),
-        name: name.trim(),
-        attendance,
-        guests,
-        message: message.trim(),
-      },
-      ...prev,
-    ]);
+    setSending(true);
+    const payload = {
+      name: name.trim(),
+      attendance,
+      guests,
+      message: message.trim(),
+    };
+    const { data, error } = await supabase
+      .from("rsvp_entries")
+      .insert(payload)
+      .select("id, name, attendance, guests, message")
+      .single();
+    setSending(false);
+
+    if (error || !data) {
+      toast.error("Maaf, konfirmasi gagal terkirim. Mohon coba lagi.");
+      return;
+    }
+
+    setWishes((prev) => [data as Wish, ...prev]);
     setPage(1);
     setSuccess(true);
     toast.success("Terima kasih, konfirmasi Anda telah kami terima.");
@@ -91,6 +103,7 @@ export function RsvpWishesSection() {
     setGuests(1);
     window.setTimeout(() => setSuccess(false), 2600);
   };
+
 
   return (
     <section
