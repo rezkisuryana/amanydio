@@ -521,19 +521,17 @@ Buat dua event.
 
 ## AKAD NIKAH
 
-20 Desember 2026
+04 Oktober 2026
 
-09.00 WIB
-
-Gedung Example
+Aula Rektorat Universitas Pamulang
 
 ## RESEPSI
 
-20 Desember 2026
+04 Oktober 2026
 
-11.00 – 15.00 WIB
+11.00 – 13.00 WIB
 
-Gedung Example
+Aula Rektorat Universitas Pamulang
 
 Gunakan icon:
 
