@@ -25,7 +25,7 @@ import { ClosingSection } from "@/components/wedding/sections/ClosingSection";
 
 const TITLE = "Undangan Pernikahan Amany & Dio";
 const DESCRIPTION =
-  "Undangan pernikahan Amany & Dio — 20 Desember 2026, Gedung Example, Jakarta Selatan.";
+  "Undangan pernikahan Amany & Dio — 04 Oktober 2026, Aula Rektorat Universitas pamulang.";
 const SITE_URL = "https://amanydio.lovable.app";
 
 export const Route = createFileRoute("/")({
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
     const guest = loaderData?.guestName ?? "";
     const title = guest ? `${guest}, Anda Kami Undang — ${TITLE}` : TITLE;
     const description = guest
-      ? `Kepada ${guest} — dengan hormat kami mengundang Anda ke pernikahan Amany & Dio, 20 Desember 2026, Gedung Example, Jakarta Selatan.`
+      ? `Kepada ${guest} — dengan hormat kami mengundang Anda ke pernikahan Amany & Dio, 04 Oktober 2026, Aula Rektorat Universitas pamulang.`
       : DESCRIPTION;
     const url = guest
       ? `${SITE_URL}/?to=${encodeURIComponent(guest)}`
