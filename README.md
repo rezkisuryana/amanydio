@@ -529,8 +529,6 @@ Aula Rektorat Universitas Pamulang
 
 04 Oktober 2026
 
-11.00 – 13.00 WIB
-
 Aula Rektorat Universitas Pamulang
 
 Gunakan icon:
