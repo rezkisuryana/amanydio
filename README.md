@@ -1111,11 +1111,11 @@ bride: {
 
 },
 
-weddingDate: "2026-12-20T09:00:00",
+weddingDate: "2026-10-04T09:00:00",
 
 venue: {
-name: "Gedung Example",
-address: "Jakarta",
+name: "Aula Rektorat Universitas Pamulang",
+address: "Pamulang, Tangerang Selatan",
 googleMapsUrl: "..."
 },
 
