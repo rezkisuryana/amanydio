@@ -97,7 +97,11 @@ function Dashboard() {
   }, []);
 
   useEffect(() => {
-    void supabase.rpc("claim_admin").then(() => load());
+    const init = async () => {
+      await supabase.rpc("claim_admin");
+      await load();
+    };
+    void init();
     if (typeof window !== "undefined" && !window.location.hostname.includes("localhost")) {
       setBase(window.location.origin);
     }
@@ -172,6 +176,8 @@ function Dashboard() {
       toast.error("Belum ada nama tamu yang valid.");
       return;
     }
+    // Ensure admin role is active before write operations
+    await supabase.rpc("claim_admin");
     const { error } = await supabase.from("guest_invites").insert(rows);
     if (error) {
       toast.error("Gagal menyimpan daftar tamu.");
