@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Music2, Pause } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import musicAsset from "@/assets/wedding-nasheed.mp3.asset.json";
+import backsoundSrc from "@/assets/backsound.mp3";
 import { cn } from "@/lib/utils";
 
 /** Musik latar undangan: nasheed pernikahan, diputar setelah tamu membuka undangan. */
@@ -44,7 +44,7 @@ export function MusicPlayer({ active }: { active: boolean }) {
     <>
       <audio
         ref={audioRef}
-        src={musicAsset.url}
+        src={backsoundSrc}
         loop
         preload="auto"
         onPlay={() => setPlaying(true)}

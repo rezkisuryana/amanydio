@@ -1,12 +1,12 @@
 import heroCouple from "@/assets/hero-couple.jpg";
-import brideAsset from "@/assets/bride-dio.jpg.asset.json";
-import groomAsset from "@/assets/groom-amany.jpg.asset.json";
+import bridePhoto from "@/assets/amany.jpeg";
+import groomPhoto from "@/assets/dio.jpeg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
-import closingAsset from "@/assets/closing-couple.jpg.asset.json";
+import closingCouple from "@/assets/couple.jpeg";
 
 export const weddingConfig = {
   couple: {
@@ -16,7 +16,7 @@ export const weddingConfig = {
       order: "Putra Ketiga dari",
       parents: ["(Alm) Bapak Heri Priyo Triyatno", "Ibu Maisaroh"],
       instagram: "22ERLAN",
-      photo: groomAsset.url,
+      photo: groomPhoto,
     },
     bride: {
       name: "Amany Fajryani",
@@ -24,7 +24,7 @@ export const weddingConfig = {
       order: "Putri Ketiga dari",
       parents: ["Bapak Dadang Suryana", "Ibu Juwarti"],
       instagram: "RIANYY30",
-      photo: brideAsset.url,
+      photo: bridePhoto,
     },
   },
 
@@ -34,7 +34,7 @@ export const weddingConfig = {
 
   photos: {
     hero: heroCouple,
-    closing: closingAsset.url,
+    closing: closingCouple,
   },
 
   quote: {
@@ -48,7 +48,7 @@ export const weddingConfig = {
       id: "akad",
       name: "Akad Nikah",
       subtitle: "Ijab Kabul",
-      date: "Sabtu, 04 Oktober 2026",
+      date: "Minggu, 04 Oktober 2026",
       time: "09.00 WIB",
       place: "Aula Rektorat Universitas Pamulang",
       address: "Jl. Surya Kencana No.1 Kel. Pamulang Barat Kota Tangerang Selatan",
@@ -57,7 +57,7 @@ export const weddingConfig = {
       id: "resepsi",
       name: "Resepsi",
       subtitle: "Tasyakuran & Pahargyan",
-      date: "Sabtu, 04 Oktober 2026",
+      date: "Minggu, 04 Oktober 2026",
       time: "11.00 – 13.00 WIB",
       place: "Aula Rektorat Universitas Pamulang",
       address: "Jl. Surya Kencana No.1 Kel. Pamulang Barat Kota Tangerang Selatan",
